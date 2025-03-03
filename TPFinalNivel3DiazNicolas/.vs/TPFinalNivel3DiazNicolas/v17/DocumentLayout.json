@@ -7,44 +7,44 @@
       "RelativeMoniker": "D:0:0:{236BAB20-A258-4407-B2CC-3A0D1A65F0AA}|interfaz\\interfaz.csproj|solutionrelative:interfaz\\default.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{236BAB20-A258-4407-B2CC-3A0D1A65F0AA}|interfaz\\interfaz.csproj|c:\\users\\nico\\documents\\c_sharp_nivel_3\\tp-final-nivel3-diaz-nicolas\\tpfinalnivel3diaznicolas\\interfaz\\css\\style2.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{236BAB20-A258-4407-B2CC-3A0D1A65F0AA}|interfaz\\interfaz.csproj|solutionrelative:interfaz\\css\\style2.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{236BAB20-A258-4407-B2CC-3A0D1A65F0AA}|interfaz\\interfaz.csproj|c:\\users\\nico\\documents\\c_sharp_nivel_3\\tp-final-nivel3-diaz-nicolas\\tpfinalnivel3diaznicolas\\interfaz\\menuusuario.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{236BAB20-A258-4407-B2CC-3A0D1A65F0AA}|interfaz\\interfaz.csproj|solutionrelative:interfaz\\menuusuario.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{236BAB20-A258-4407-B2CC-3A0D1A65F0AA}|interfaz\\interfaz.csproj|c:\\users\\nico\\documents\\c_sharp_nivel_3\\tp-final-nivel3-diaz-nicolas\\tpfinalnivel3diaznicolas\\interfaz\\default.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{236BAB20-A258-4407-B2CC-3A0D1A65F0AA}|interfaz\\interfaz.csproj|solutionrelative:interfaz\\default.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{236BAB20-A258-4407-B2CC-3A0D1A65F0AA}|interfaz\\interfaz.csproj|c:\\users\\nico\\documents\\c_sharp_nivel_3\\tp-final-nivel3-diaz-nicolas\\tpfinalnivel3diaznicolas\\interfaz\\menuusuario.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{236BAB20-A258-4407-B2CC-3A0D1A65F0AA}|interfaz\\interfaz.csproj|C:\\Users\\nico\\Documents\\c_sharp_nivel_3\\tp-final-nivel3-diaz-nicolas\\TPFinalNivel3DiazNicolas\\interfaz\\menuusuario.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{236BAB20-A258-4407-B2CC-3A0D1A65F0AA}|interfaz\\interfaz.csproj|solutionrelative:interfaz\\menuusuario.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{236BAB20-A258-4407-B2CC-3A0D1A65F0AA}|interfaz\\interfaz.csproj|c:\\users\\nico\\documents\\c_sharp_nivel_3\\tp-final-nivel3-diaz-nicolas\\tpfinalnivel3diaznicolas\\interfaz\\masterdefault.master.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{236BAB20-A258-4407-B2CC-3A0D1A65F0AA}|interfaz\\interfaz.csproj|C:\\Users\\nico\\Documents\\c_sharp_nivel_3\\tp-final-nivel3-diaz-nicolas\\TPFinalNivel3DiazNicolas\\interfaz\\menuusuario.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{236BAB20-A258-4407-B2CC-3A0D1A65F0AA}|interfaz\\interfaz.csproj|solutionrelative:interfaz\\menuusuario.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{236BAB20-A258-4407-B2CC-3A0D1A65F0AA}|interfaz\\interfaz.csproj|C:\\Users\\nico\\Documents\\c_sharp_nivel_3\\tp-final-nivel3-diaz-nicolas\\TPFinalNivel3DiazNicolas\\interfaz\\css\\style2.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{236BAB20-A258-4407-B2CC-3A0D1A65F0AA}|interfaz\\interfaz.csproj|solutionrelative:interfaz\\css\\style2.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11EA2E35-8DC4-4A73-9C38-6856FE2432A2}|Helper\\Helper.csproj|C:\\Users\\nico\\Documents\\c_sharp_nivel_3\\tp-final-nivel3-diaz-nicolas\\TPFinalNivel3DiazNicolas\\helper\\helper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11EA2E35-8DC4-4A73-9C38-6856FE2432A2}|Helper\\Helper.csproj|solutionrelative:helper\\helper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{236BAB20-A258-4407-B2CC-3A0D1A65F0AA}|interfaz\\interfaz.csproj|C:\\Users\\nico\\Documents\\c_sharp_nivel_3\\tp-final-nivel3-diaz-nicolas\\TPFinalNivel3DiazNicolas\\interfaz\\default.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{236BAB20-A258-4407-B2CC-3A0D1A65F0AA}|interfaz\\interfaz.csproj|solutionrelative:interfaz\\default.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{236BAB20-A258-4407-B2CC-3A0D1A65F0AA}|interfaz\\interfaz.csproj|C:\\Users\\nico\\Documents\\c_sharp_nivel_3\\tp-final-nivel3-diaz-nicolas\\TPFinalNivel3DiazNicolas\\interfaz\\masterdefault.master.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{236BAB20-A258-4407-B2CC-3A0D1A65F0AA}|interfaz\\interfaz.csproj|solutionrelative:interfaz\\masterdefault.master.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{236BAB20-A258-4407-B2CC-3A0D1A65F0AA}|interfaz\\interfaz.csproj|c:\\users\\nico\\documents\\c_sharp_nivel_3\\tp-final-nivel3-diaz-nicolas\\tpfinalnivel3diaznicolas\\interfaz\\registro.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{236BAB20-A258-4407-B2CC-3A0D1A65F0AA}|interfaz\\interfaz.csproj|C:\\Users\\nico\\Documents\\c_sharp_nivel_3\\tp-final-nivel3-diaz-nicolas\\TPFinalNivel3DiazNicolas\\interfaz\\registro.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{236BAB20-A258-4407-B2CC-3A0D1A65F0AA}|interfaz\\interfaz.csproj|solutionrelative:interfaz\\registro.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{236BAB20-A258-4407-B2CC-3A0D1A65F0AA}|interfaz\\interfaz.csproj|c:\\users\\nico\\documents\\c_sharp_nivel_3\\tp-final-nivel3-diaz-nicolas\\tpfinalnivel3diaznicolas\\interfaz\\masterdefault.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}",
+      "AbsoluteMoniker": "D:0:0:{236BAB20-A258-4407-B2CC-3A0D1A65F0AA}|interfaz\\interfaz.csproj|C:\\Users\\nico\\Documents\\c_sharp_nivel_3\\tp-final-nivel3-diaz-nicolas\\TPFinalNivel3DiazNicolas\\interfaz\\masterdefault.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}",
       "RelativeMoniker": "D:0:0:{236BAB20-A258-4407-B2CC-3A0D1A65F0AA}|interfaz\\interfaz.csproj|solutionrelative:interfaz\\masterdefault.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{236BAB20-A258-4407-B2CC-3A0D1A65F0AA}|interfaz\\interfaz.csproj|c:\\users\\nico\\documents\\c_sharp_nivel_3\\tp-final-nivel3-diaz-nicolas\\tpfinalnivel3diaznicolas\\interfaz\\registro.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "AbsoluteMoniker": "D:0:0:{236BAB20-A258-4407-B2CC-3A0D1A65F0AA}|interfaz\\interfaz.csproj|C:\\Users\\nico\\Documents\\c_sharp_nivel_3\\tp-final-nivel3-diaz-nicolas\\TPFinalNivel3DiazNicolas\\interfaz\\registro.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{236BAB20-A258-4407-B2CC-3A0D1A65F0AA}|interfaz\\interfaz.csproj|solutionrelative:interfaz\\registro.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B13A921F-EA6F-4583-9223-BEAB0813F8E5}|negocio\\negocio.csproj|c:\\users\\nico\\documents\\c_sharp_nivel_3\\tp-final-nivel3-diaz-nicolas\\tpfinalnivel3diaznicolas\\negocio\\usuarionegocio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B13A921F-EA6F-4583-9223-BEAB0813F8E5}|negocio\\negocio.csproj|C:\\Users\\nico\\Documents\\c_sharp_nivel_3\\tp-final-nivel3-diaz-nicolas\\TPFinalNivel3DiazNicolas\\negocio\\usuarionegocio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B13A921F-EA6F-4583-9223-BEAB0813F8E5}|negocio\\negocio.csproj|solutionrelative:negocio\\usuarionegocio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{11EA2E35-8DC4-4A73-9C38-6856FE2432A2}|Helper\\Helper.csproj|c:\\users\\nico\\documents\\c_sharp_nivel_3\\tp-final-nivel3-diaz-nicolas\\tpfinalnivel3diaznicolas\\helper\\helper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{11EA2E35-8DC4-4A73-9C38-6856FE2432A2}|Helper\\Helper.csproj|solutionrelative:helper\\helper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C0D3B94E-6524-473E-8A9A-DFB9960E6CC8}|dominio\\dominio.csproj|C:\\Users\\nico\\Documents\\c_sharp_nivel_3\\tp-final-nivel3-diaz-nicolas\\TPFinalNivel3DiazNicolas\\dominio\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -71,8 +71,7 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-11T00:41:28.131Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Bookmark",
@@ -88,7 +87,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "UsuarioNegocio.cs",
               "DocumentMoniker": "C:\\Users\\nico\\Documents\\c_sharp_nivel_3\\tp-final-nivel3-diaz-nicolas\\TPFinalNivel3DiazNicolas\\negocio\\UsuarioNegocio.cs",
               "RelativeDocumentMoniker": "negocio\\UsuarioNegocio.cs",
@@ -96,12 +95,11 @@
               "RelativeToolTip": "negocio\\UsuarioNegocio.cs",
               "ViewState": "AgIAAA0AAAAAAAAAAAAgwD8AAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-03T17:49:11.878Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-03T17:49:11.878Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "Registro.aspx.cs",
               "DocumentMoniker": "C:\\Users\\nico\\Documents\\c_sharp_nivel_3\\tp-final-nivel3-diaz-nicolas\\TPFinalNivel3DiazNicolas\\interfaz\\Registro.aspx.cs",
               "RelativeDocumentMoniker": "interfaz\\Registro.aspx.cs",
@@ -109,12 +107,11 @@
               "RelativeToolTip": "interfaz\\Registro.aspx.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAACIAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-03T15:13:56.709Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-03T15:13:56.709Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "Registro.aspx",
               "DocumentMoniker": "C:\\Users\\nico\\Documents\\c_sharp_nivel_3\\tp-final-nivel3-diaz-nicolas\\TPFinalNivel3DiazNicolas\\interfaz\\Registro.aspx",
               "RelativeDocumentMoniker": "interfaz\\Registro.aspx",
@@ -127,7 +124,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "masterDefault.Master",
               "DocumentMoniker": "C:\\Users\\nico\\Documents\\c_sharp_nivel_3\\tp-final-nivel3-diaz-nicolas\\TPFinalNivel3DiazNicolas\\interfaz\\masterDefault.Master",
               "RelativeDocumentMoniker": "interfaz\\masterDefault.Master",
@@ -140,7 +137,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "masterDefault.Master.cs",
               "DocumentMoniker": "C:\\Users\\nico\\Documents\\c_sharp_nivel_3\\tp-final-nivel3-diaz-nicolas\\TPFinalNivel3DiazNicolas\\interfaz\\masterDefault.Master.cs",
               "RelativeDocumentMoniker": "interfaz\\masterDefault.Master.cs",
@@ -148,38 +145,37 @@
               "RelativeToolTip": "interfaz\\masterDefault.Master.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-03T14:01:59.127Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-03T14:01:59.127Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "style2.css",
               "DocumentMoniker": "C:\\Users\\nico\\Documents\\c_sharp_nivel_3\\tp-final-nivel3-diaz-nicolas\\TPFinalNivel3DiazNicolas\\interfaz\\css\\style2.css",
               "RelativeDocumentMoniker": "interfaz\\css\\style2.css",
               "ToolTip": "C:\\Users\\nico\\Documents\\c_sharp_nivel_3\\tp-final-nivel3-diaz-nicolas\\TPFinalNivel3DiazNicolas\\interfaz\\css\\style2.css",
               "RelativeToolTip": "interfaz\\css\\style2.css",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADEAAAAiAAAAAAAAAA==",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAAEUAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
               "WhenOpened": "2025-03-03T13:58:53.792Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "MenuUsuario.aspx.cs",
               "DocumentMoniker": "C:\\Users\\nico\\Documents\\c_sharp_nivel_3\\tp-final-nivel3-diaz-nicolas\\TPFinalNivel3DiazNicolas\\interfaz\\MenuUsuario.aspx.cs",
               "RelativeDocumentMoniker": "interfaz\\MenuUsuario.aspx.cs",
               "ToolTip": "C:\\Users\\nico\\Documents\\c_sharp_nivel_3\\tp-final-nivel3-diaz-nicolas\\TPFinalNivel3DiazNicolas\\interfaz\\MenuUsuario.aspx.cs",
               "RelativeToolTip": "interfaz\\MenuUsuario.aspx.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAvAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAABEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-03T13:56:04.403Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 4,
               "Title": "Helper.cs",
               "DocumentMoniker": "C:\\Users\\nico\\Documents\\c_sharp_nivel_3\\tp-final-nivel3-diaz-nicolas\\TPFinalNivel3DiazNicolas\\Helper\\Helper.cs",
               "RelativeDocumentMoniker": "Helper\\Helper.cs",
@@ -211,14 +207,14 @@
               "RelativeDocumentMoniker": "interfaz\\Default.aspx.cs",
               "ToolTip": "C:\\Users\\nico\\Documents\\c_sharp_nivel_3\\tp-final-nivel3-diaz-nicolas\\TPFinalNivel3DiazNicolas\\interfaz\\Default.aspx.cs",
               "RelativeToolTip": "interfaz\\Default.aspx.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-03T13:55:52.151Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "Default.aspx",
               "DocumentMoniker": "C:\\Users\\nico\\Documents\\c_sharp_nivel_3\\tp-final-nivel3-diaz-nicolas\\TPFinalNivel3DiazNicolas\\interfaz\\Default.aspx",
               "RelativeDocumentMoniker": "interfaz\\Default.aspx",

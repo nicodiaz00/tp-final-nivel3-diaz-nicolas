@@ -11,11 +11,21 @@ namespace interfaz
 {
     public partial class MenuUsuario : System.Web.UI.Page
     {
-        
+        public Usuario usuarioAux {  get; set; }
         
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+            if (!IsPostBack)
+            {
+                if (Session["usuario"] != null)
+                {
+                    usuarioAux = (Usuario)Session["usuario"];
+                    usuarioTxt.Text = usuarioAux.Nombre;
+                    apellidoTxt.Text = usuarioAux.Apellido;
+                    emailTxt.Text = usuarioAux.Email;
+                   perfilTxt.Text = usuarioAux.UrlImagen.ToString();
+                }
+            }
         }
 
         protected void btnVolver_Click(object sender, EventArgs e)

@@ -49,3 +49,23 @@ header{
     height:100px;
     background-color:antiquewhite;
 }
+.panelUsuario {
+    margin-left: 20px;
+    background-color: grey;
+    margin-top: 20px;
+    border-radius: 20px;
+    padding: 20px;
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.imagenPerfil {
+    width: 30%;
+    height: auto;
+    
+    background-color: ghostwhite;
+}
+.panel-perfil{
+    width:50%;
+}
