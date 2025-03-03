@@ -3,52 +3,52 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="row">
-        <%if (Session["usuario"] != null)
-            {%>
-        <style>
-            .contenedorLogin {
-                display: none;
-            }
-        </style>
-        <%}%>
-        <%if (Session["usuario"] == null)
-            {%>
-        <style>
-            .contenedorAdmin {
-                display: none;
-            }
-        </style>
-        <%}%>
-        <div class="col-6">
-            <!--   aca esta el contedor para mostrar el login-->
-            <div class="contenedorLogin">
-                <h3>Inicia Sesion</h3>
-                <div class="mb-4">
-                    <label for="usuario" class="form-label">Usuario</label>
-                    <asp:TextBox runat="server" ID="txtUser" CssClass="form-control"></asp:TextBox>
+    <div class="row row-panel">
+        <div class="col-12">
+            
+            <div class="panelUsuario">
+                <%if (Session["usuario"] == null)
+                    {%>
+                <div class="">
+                    <h3>No iniciaste session</h3>
+                    <asp:Button runat="server" ID="btnVolver" OnClick="btnVolver_Click" Text="Volver" CssClass="btn btn-primary"/>
                 </div>
-                <div class="mb-4">
-                    <label for="password" class="form-label">Password</label>
-                    <asp:TextBox runat="server" ID="txtPassword" CssClass="form-control" TextMode="Password"></asp:TextBox>
+                <%}
+                    else
+                    {%>
+                <div class="panel-perfil">
+                    <div class="titulo">
+                        <h3>Panel Usuario</h3>
+                    </div>
+                    <div class="imagenPerfil">
+                        <img src="#" class="" alt="Imagen perfil" />
+                    </div>
+                    <div class="">
+                        <div class="mb-4">
+                            <label for="Nombre" class="form-label">Nombre</label>
+                            <asp:TextBox runat="server" ID="usuarioTxt" CssClass="form-control"></asp:TextBox>
+                        </div>
+                        <div class="mb-4">
+                            <label for="Apellido" class="form-label">Apellido</label>
+                            <asp:TextBox runat="server" ID="apellidoTxt" CssClass="form-control"></asp:TextBox>
+                        </div>
+                        <div class="mb-4">
+                            <label for="Email" class="form-label">Email</label>
+                            <asp:TextBox runat="server" ID="emailTxt" CssClass="form-control"></asp:TextBox>
+                        </div>
+                        <div class="mb-4">
+                            <label for="imgPerfil" class="form-label">Imagen Perfil</label>
+                            <asp:TextBox runat="server" ID="perfilTxt" CssClass="form-control"></asp:TextBox>
+                        </div>
+                        <div class="mb-4">
+                        </div>
+                    </div>
                 </div>
-                <asp:Button runat="server" ID="btnLogin" CssClass="btn btn-primary" Text="Iniciar Sesion" OnClick="btnLogin_Click" />
+                <%}
+                %>
             </div>
-            <div class="contenedorAdmin">
-                <div class="mb-4">
-                    <label for="imagenPerfil" class="form-label">Image</label>
-                    <asp:Image runat="server" ID="imagenPefil" />
-                </div>
-                <div class="mb-4">
-                    <label for="ID" class="form-label">Nombre</label>
-                    <asp:TextBox runat="server" ID="txtNombre" CssClass="form-control" ></asp:TextBox>
-                </div>
-
-
-
-            </div>
-
         </div>
+
     </div>
 
 

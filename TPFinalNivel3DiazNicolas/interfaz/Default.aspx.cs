@@ -21,7 +21,7 @@ namespace interfaz
                 ArticuloNegocio negocio = new ArticuloNegocio();
                 Listado = negocio.listarArticulo();
                 Session.Add("listadoArticulo", Listado);
-
+                
                 repArticulo.DataSource = Listado;
                 repArticulo.DataBind();
             }

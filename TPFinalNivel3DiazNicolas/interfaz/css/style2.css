@@ -3,14 +3,14 @@
     width:100%;
 }
 .columnacard{
-    display:flex;
-    
-    
+    display: flex;
+    flex-direction: row;
+    width:100%;
 }
 .card {
-    width: 18rem;
-    padding-top:20px
-
+    width: 350px;
+    height: 900px;
+    background-color: rebeccapurple;
 }
 header{
     background-color:red;
@@ -18,4 +18,34 @@ header{
 }
 .oculto {
     display:none;
+}
+#row-art{
+    display:flex;
+    flex-direction:column;
+}
+.banner{
+    height:400px;
+    background-color:blanchedalmond;
+}
+.contenedorRegistro, .contenedorLogin {
+    width: 50%;
+    background-color: greenyellow;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.contenedor-form{
+    width:60%;
+    display:flex;
+    flex-direction:column;
+}
+.row-panel{
+    height:100vh;
+    background-color:palevioletred;
+}
+.imagenPerfil{
+    width:100px;
+    height:100px;
+    background-color:antiquewhite;
 }

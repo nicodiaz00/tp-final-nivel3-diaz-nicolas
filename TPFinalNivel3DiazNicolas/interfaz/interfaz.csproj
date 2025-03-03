@@ -68,7 +68,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Error.aspx" />
-    <Content Include="Log.aspx" />
     <Content Include="About.aspx" />
     <Content Include="css\style2.css" />
     <Content Include="Default.aspx" />
@@ -86,13 +85,6 @@
     </Compile>
     <Compile Include="Error.aspx.designer.cs">
       <DependentUpon>Error.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Log.aspx.cs">
-      <DependentUpon>Log.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Log.aspx.designer.cs">
-      <DependentUpon>Log.aspx</DependentUpon>
     </Compile>
     <Compile Include="About.aspx.cs">
       <DependentUpon>About.aspx</DependentUpon>
