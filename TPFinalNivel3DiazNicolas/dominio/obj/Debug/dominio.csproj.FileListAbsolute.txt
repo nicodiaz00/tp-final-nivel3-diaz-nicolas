@@ -1,0 +1,12 @@
+C:\Users\Nico\Documents\c#nivelTres\tp-final-nivel3-Diaz-Nicolas\TPFinalNivel3DiazNicolas\dominio\bin\Debug\dominio.dll
+C:\Users\Nico\Documents\c#nivelTres\tp-final-nivel3-Diaz-Nicolas\TPFinalNivel3DiazNicolas\dominio\bin\Debug\dominio.pdb
+C:\Users\Nico\Documents\c#nivelTres\tp-final-nivel3-Diaz-Nicolas\TPFinalNivel3DiazNicolas\dominio\obj\Debug\dominio.csproj.AssemblyReference.cache
+C:\Users\Nico\Documents\c#nivelTres\tp-final-nivel3-Diaz-Nicolas\TPFinalNivel3DiazNicolas\dominio\obj\Debug\dominio.csproj.CoreCompileInputs.cache
+C:\Users\Nico\Documents\c#nivelTres\tp-final-nivel3-Diaz-Nicolas\TPFinalNivel3DiazNicolas\dominio\obj\Debug\dominio.dll
+C:\Users\Nico\Documents\c#nivelTres\tp-final-nivel3-Diaz-Nicolas\TPFinalNivel3DiazNicolas\dominio\obj\Debug\dominio.pdb
+C:\Users\nico\Documents\c_sharp_nivel_3\tp-final-nivel3-diaz-nicolas\TPFinalNivel3DiazNicolas\dominio\bin\Debug\dominio.dll
+C:\Users\nico\Documents\c_sharp_nivel_3\tp-final-nivel3-diaz-nicolas\TPFinalNivel3DiazNicolas\dominio\bin\Debug\dominio.pdb
+C:\Users\nico\Documents\c_sharp_nivel_3\tp-final-nivel3-diaz-nicolas\TPFinalNivel3DiazNicolas\dominio\obj\Debug\dominio.csproj.AssemblyReference.cache
+C:\Users\nico\Documents\c_sharp_nivel_3\tp-final-nivel3-diaz-nicolas\TPFinalNivel3DiazNicolas\dominio\obj\Debug\dominio.csproj.CoreCompileInputs.cache
+C:\Users\nico\Documents\c_sharp_nivel_3\tp-final-nivel3-diaz-nicolas\TPFinalNivel3DiazNicolas\dominio\obj\Debug\dominio.dll
+C:\Users\nico\Documents\c_sharp_nivel_3\tp-final-nivel3-diaz-nicolas\TPFinalNivel3DiazNicolas\dominio\obj\Debug\dominio.pdb

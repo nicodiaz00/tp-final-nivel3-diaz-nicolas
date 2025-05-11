@@ -1,0 +1,60 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="masterDefault.master.cs" Inherits="interfaz.masterDefault" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+</head>
+<body>
+    <form id="form1" runat="server">
+        
+
+        
+        <header>
+            
+            <div class="contenedor-header">
+                <div class="contenedor-logo">
+                    
+                </div>
+                <div class="menu-navegacion">
+                    <ul>
+                        <li>
+                            <a href="Default.aspx" class="button-a">Articulos</a>
+                        </li>
+                        <li>
+                            <a href="Listado.aspx" class="button-a">Listado</a>
+                        </li>
+                        <li>
+                            <a href="Formulario.aspx" class="button-a">Formulario</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="menu-login">
+                    <ul>
+                        <li>
+                            <a href="MenuUsuario.aspx" class="button-a">Inicia Sesion</a>
+                        </li>
+                        <li>
+                            <a href="Registro.aspx" class="button-a">Registrarme</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+            
+        
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        
+    </form>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style2.css?v=<%= DateTime.Now.Ticks %>">
+
+</body>
+
+</html>
