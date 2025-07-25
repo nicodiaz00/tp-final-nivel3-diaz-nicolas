@@ -15,6 +15,33 @@ namespace interfaz
     {
 
         /// <summary>
+        /// Control emailUserTxt.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox emailUserTxt;
+
+        /// <summary>
+        /// Control emailPassTxt.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox emailPassTxt;
+
+        /// <summary>
+        /// Control btnIniciarS.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnIniciarS;
+
+        /// <summary>
         /// Control btnVolver.
         /// </summary>
         /// <remarks>

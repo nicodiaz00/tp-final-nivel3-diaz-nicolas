@@ -14,16 +14,29 @@ namespace interfaz
         
         protected void Page_Load(object sender, EventArgs e)
         {
-            
-           
-                
-            
-            
-                
-            
-            
+
+            if (Session["usuario"] == null)
+            {
+                btnMenuUser.Text = "Inicia Sesion";
+            }
+            else
+            {
+                btnMenuUser.Text = "Cerrar Sesion";
+                btnMenuUser.CssClass = "btn-cerrar-sesion";
+            }
         }
 
-        
+
+
+
+
+
+
+
+        protected void btnMenuUser_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("MenuUsuario.aspx", false);
+        }
+            
     }
 }

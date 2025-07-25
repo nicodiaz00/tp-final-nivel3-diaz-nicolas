@@ -30,7 +30,7 @@ namespace interfaz
 
         protected void btnVolver_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Registro.aspx");
+            Response.Redirect("Default.aspx");
         }
 
         protected void btnGestion_Click(object sender, EventArgs e)
@@ -41,6 +41,25 @@ namespace interfaz
         protected void btnEditarPerfil_Click(object sender, EventArgs e)
         {
            
+        }
+
+        protected void btnIniciarS_Click(object sender, EventArgs e)
+        {
+            UsuarioNegocio usuarioNegocio = new UsuarioNegocio();
+            if (IsPostBack)
+            {
+                usuarioAux = usuarioNegocio.loguearse(emailUserTxt.Text, emailPassTxt.Text);
+                if (usuarioAux != null)
+                {
+                    Session["usuario"] = usuarioAux;
+                    Response.Redirect("MenuUsuario.aspx", false);
+                }
+                else
+                {
+                    
+
+                }
+            }
         }
     }
 }

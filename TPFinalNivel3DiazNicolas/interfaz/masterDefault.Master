@@ -37,7 +37,8 @@
                 <div class="menu-login">
                     <ul>
                         <li>
-                            <a href="MenuUsuario.aspx" class="button-a">Inicia Sesion</a>
+                            <!--<a href="MenuUsuario.aspx" class="button-a">Inicia Sesion</a> -->
+                            <asp:Button runat="server" ID="btnMenuUser" CssClass="button-a" Text="Inicia Sesion" OnClick="btnMenuUser_Click"/>
                         </li>
                         <li>
                             <a href="Registro.aspx" class="button-a">Registrarme</a>
