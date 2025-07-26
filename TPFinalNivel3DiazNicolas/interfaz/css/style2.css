@@ -88,12 +88,25 @@ header {
     flex-direction:row;
     height:100%;
 }
-.contenedor-logo > a > img {
-    height:50px;
-    width:50px;
+
+
+.contendor-img-logo{
+    background-color:rebeccapurple;
+    width:70px;
+    height:70px;
+    align-items:center;
+    display:flex;
+    justify-content:center;
+    margin-left:3%;
+    border-radius:30px;
+
 }
-.contenedor-logo > a {
-    margin-left:2%;
+.contendor-img-logo > a > img{
+    display:flex;
+    width:50px;
+    height:auto;
+   
+
 }
 
 .menu-navegacion > ul, .menu-login > ul {
@@ -125,12 +138,44 @@ header {
     border-radius: 20px;
     transition: background-color 0.3s ease;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* sombra */
+    border:none;
 }
     .button-a:hover {
         background-color: rgba(0, 123, 255, 0.4); /* Color al pasar el mouse */
         color: white;
     }
 
+.btn-cerrar-sesion {
+    display: inline-block;
+    background-color: lightgray; /* Color azul tipo botón */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* sombra */
+    border:none;
+}
+    .btn-cerrar-sesion:hover {
+        background-color: rgba(202, 7, 7, 0.95); /* Color al pasar el mouse */
+        color:white;
+    }
+
+.btn-mi-cuenta {
+    display: inline-block;
+    background-color: lightgray; /* Color azul tipo botón */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* sombra */
+    border:none;
+}
+    .btn-mi-cuenta:hover {
+        background-color: rgba(0, 123, 255, 0.4); /* Color al pasar el mouse */
+        color: white;
+    }
 .contenedor-logo, .menu-navegacion, .menu-login {
     width: 33.33%;
     display: flex;
@@ -202,15 +247,12 @@ header {
     object-fit: cover; /* Ajusta el recorte de la imagen */
 }
 
-
 /*  PAGINA LISTADO.ASPX*/
-
-.contenedor-listado-main{
-    height:100vh;
-    width:100%;
-    display:flex;
-    flex-direction:column;
-    
+.contenedor-listado-main {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 .titulo{
     

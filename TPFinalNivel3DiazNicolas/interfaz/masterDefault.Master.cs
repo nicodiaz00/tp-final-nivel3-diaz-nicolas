@@ -10,19 +10,20 @@ namespace interfaz
 {
     public partial class masterDefault : System.Web.UI.MasterPage
     {
-        
-        
+
+
         protected void Page_Load(object sender, EventArgs e)
         {
 
-            if (Session["usuario"] == null)
-            {
-                btnMenuUser.Text = "Inicia Sesion";
-            }
-            else
+
+            if (Session["usuario"] != null)
             {
                 btnMenuUser.Text = "Cerrar Sesion";
                 btnMenuUser.CssClass = "btn-cerrar-sesion";
+                btnRegistrarse.Text = "Mi cuenta";
+                btnRegistrarse.CssClass = "btn-mi-cuenta";
+
+
             }
         }
 
@@ -35,8 +36,22 @@ namespace interfaz
 
         protected void btnMenuUser_Click(object sender, EventArgs e)
         {
-            Response.Redirect("MenuUsuario.aspx", false);
-        }
+            if (btnMenuUser.Text == "Inicia Sesion")
+            {
+                Response.Redirect("MenuUsuario.aspx", false);
+            } else if(btnMenuUser.Text == "Cerrar Sesion")
+            {
+                Session["usuario"] = null;
+                Response.Redirect("error.aspx");
+                
+            }
             
+            
+        }
+
+        protected void btnRegistrarse_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
