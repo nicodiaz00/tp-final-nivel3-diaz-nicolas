@@ -39,7 +39,7 @@ namespace interfaz
             if (btnMenuUser.Text == "Inicia Sesion")
             {
                 Response.Redirect("MenuUsuario.aspx", false);
-            } else if(btnMenuUser.Text == "Cerrar Sesion")
+            } else
             {
                 Session["usuario"] = null;
                 Response.Redirect("error.aspx");
@@ -51,7 +51,14 @@ namespace interfaz
 
         protected void btnRegistrarse_Click(object sender, EventArgs e)
         {
-
+            if(btnRegistrarse.Text == "Registrarse")
+            {
+                Response.Redirect("Registro.aspx", false);
+            }
+            else
+            {
+                Response.Redirect("MenuUsuario.aspx", false);
+            }
         }
     }
 }

@@ -28,23 +28,7 @@ namespace interfaz
         protected void btnLogin_Click(object sender, EventArgs e)
         {
 
-            UsuarioNegocio usuarioNegocio = new UsuarioNegocio();
-            if (IsPostBack)
-            {
-                usuario = usuarioNegocio.loguearse(txtEmailUsuario.Text, txtContrasenaUsuario.Text);
-                if (usuario != null)
-                {
-                    Session["usuario"] = usuario;
-                    Response.Redirect("MenuUsuario.aspx", false);
-                }
-                else
-                {
-                    lblLogueado.Text = Helper.Helper.userNoregistrado();
-
-                }
-            }
-            
-            
+           
                 
             
         }
