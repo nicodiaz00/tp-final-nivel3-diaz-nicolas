@@ -609,3 +609,79 @@ header {
 .label-user, .label-user-pass {
     margin-left: 3%;
 }
+
+/*Pagina registro*/
+
+.contenedor-main-registro{
+    
+    display:flex;
+    flex-direction:column;
+    height:80vh;
+    width:100%;
+}
+.contenedor-registro{
+    
+    display:flex;
+    width:100%;
+    flex-direction:row;
+    height:70%;
+    justify-content:center;
+}
+.contenedor-form {
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+    width: 50%;
+    margin-top: 2%;
+    margin-right: 0.5%;
+    border-radius: 20px;
+    background-color:whitesmoke;
+}
+.contendor-img-perfil {
+    width: 30%;
+    background-color:greenyellow;
+    margin-top:2%;
+    margin-left:0.5%;
+}
+.div-form{
+    display:flex;
+    width:100%;
+    flex-direction:column;
+    
+    height:15%;
+}
+    .div-form > label {
+        margin-left: 1%;
+        margin-top: 1%;
+       
+    }
+.txtbox-form {
+    width: 40%;
+    margin-left: 1.5%;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    padding-left: 1%;
+    outline: none; /* Evita el contorno predeterminado negro al enfocar */
+    transition: border 0.1s ease; /* Suaviza el cambio */
+}
+    .txtbox-form:focus {
+        border: 2px solid rgba(0, 123, 255, 0.4);
+         /* Azul translúcido */
+    }
+.btnRegistro {
+    width:15%;
+    display: inline-block;
+    background-color: lightgray; /* Color azul tipo botón */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* sombra */
+    border: none;
+    margin-left:2%;
+    margin-top:2%;
+}
+    .btnRegistro:hover {
+        background-color: rgba(0, 123, 255, 0.4); /* Color al pasar el mouse */
+        color: white;
+    }
+
