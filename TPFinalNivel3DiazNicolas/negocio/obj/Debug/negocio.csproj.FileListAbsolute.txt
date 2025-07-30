@@ -16,3 +16,12 @@ C:\Users\nico\Documents\c_sharp_nivel_3\tp-final-nivel3-diaz-nicolas\TPFinalNive
 C:\Users\nico\Documents\c_sharp_nivel_3\tp-final-nivel3-diaz-nicolas\TPFinalNivel3DiazNicolas\negocio\obj\Debug\negocio.csproj.Up2Date
 C:\Users\nico\Documents\c_sharp_nivel_3\tp-final-nivel3-diaz-nicolas\TPFinalNivel3DiazNicolas\negocio\obj\Debug\negocio.dll
 C:\Users\nico\Documents\c_sharp_nivel_3\tp-final-nivel3-diaz-nicolas\TPFinalNivel3DiazNicolas\negocio\obj\Debug\negocio.pdb
+C:\Users\nico\Documents\c#\tp-final-nivel3-diaz-nicolas\TPFinalNivel3DiazNicolas\negocio\bin\Debug\negocio.dll
+C:\Users\nico\Documents\c#\tp-final-nivel3-diaz-nicolas\TPFinalNivel3DiazNicolas\negocio\bin\Debug\negocio.pdb
+C:\Users\nico\Documents\c#\tp-final-nivel3-diaz-nicolas\TPFinalNivel3DiazNicolas\negocio\bin\Debug\dominio.dll
+C:\Users\nico\Documents\c#\tp-final-nivel3-diaz-nicolas\TPFinalNivel3DiazNicolas\negocio\bin\Debug\dominio.pdb
+C:\Users\nico\Documents\c#\tp-final-nivel3-diaz-nicolas\TPFinalNivel3DiazNicolas\negocio\obj\Debug\negocio.csproj.AssemblyReference.cache
+C:\Users\nico\Documents\c#\tp-final-nivel3-diaz-nicolas\TPFinalNivel3DiazNicolas\negocio\obj\Debug\negocio.csproj.CoreCompileInputs.cache
+C:\Users\nico\Documents\c#\tp-final-nivel3-diaz-nicolas\TPFinalNivel3DiazNicolas\negocio\obj\Debug\negocio.csproj.Up2Date
+C:\Users\nico\Documents\c#\tp-final-nivel3-diaz-nicolas\TPFinalNivel3DiazNicolas\negocio\obj\Debug\negocio.dll
+C:\Users\nico\Documents\c#\tp-final-nivel3-diaz-nicolas\TPFinalNivel3DiazNicolas\negocio\obj\Debug\negocio.pdb

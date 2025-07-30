@@ -554,15 +554,15 @@ header {
 }
 .contendor-login {
     background-color: white;
-    width: 25%;
+    width: 30%;
     height: 60%;
     display: flex;
     flex-direction: column;
     border-radius: 10px;
-    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+    box-shadow: 3px 1px 3px rgba(0, 0, 0, 0.2);
     border-radius: 20px;
-    align-items:center;
-    justify-content:center;
+    align-items: center;
+    justify-content: center;
 }
 .contendor-user, .contendor-pass {
     
@@ -618,35 +618,48 @@ header {
     flex-direction:column;
     height:80vh;
     width:100%;
+    align-items:center;
+    justify-content:center
 }
-.contenedor-registro{
-    
-    display:flex;
-    width:100%;
-    flex-direction:row;
-    height:70%;
-    justify-content:center;
+.contenedor-registro {
+    display: flex;
+    width: 30%;
+    flex-direction: row;
+    height: 70%;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 3px 1px 3px rgba(0, 0, 0, 0.2);
 }
 .contenedor-form {
-    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
-    width: 50%;
+    
+    width: 90%;
     margin-top: 2%;
-    margin-right: 0.5%;
-    border-radius: 20px;
-    background-color:whitesmoke;
+    
+    
+   
 }
 .contendor-img-perfil {
-    width: 30%;
-    background-color:greenyellow;
-    margin-top:2%;
-    margin-left:0.5%;
-}
-.div-form{
-    display:flex;
-    width:100%;
-    flex-direction:column;
+    width: 30%;   
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    background-color:yellow;
     
-    height:15%;
+    
+    
+}
+.img-registro-perfil {
+    border-radius: 20px;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2)
+}
+.div-form {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    height: 15%;
+    
 }
     .div-form > label {
         margin-left: 1%;
@@ -654,31 +667,34 @@ header {
        
     }
 .txtbox-form {
-    width: 40%;
+    width: 60%;
     margin-left: 1.5%;
     border: 1px solid transparent;
     border-radius: 10px;
     padding-left: 1%;
     outline: none; /* Evita el contorno predeterminado negro al enfocar */
     transition: border 0.1s ease; /* Suaviza el cambio */
+    background-color: whitesmoke;
 }
     .txtbox-form:focus {
         border: 2px solid rgba(0, 123, 255, 0.4);
          /* Azul translúcido */
     }
 .btnRegistro {
-    width:15%;
+    width:45%;
     display: inline-block;
     background-color: lightgray; /* Color azul tipo botón */
     color: white;
-    padding: 10px 20px;
+    padding:10px 10px;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
     text-decoration: none;
     border-radius: 20px;
     transition: background-color 0.3s ease;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* sombra */
     border: none;
     margin-left:2%;
-    margin-top:2%;
+    margin-top:4%;
+    
 }
     .btnRegistro:hover {
         background-color: rgba(0, 123, 255, 0.4); /* Color al pasar el mouse */

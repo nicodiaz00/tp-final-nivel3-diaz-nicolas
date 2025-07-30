@@ -30,10 +30,9 @@
                             <asp:Button runat="server" ID="btnRegistro" OnClick="btnRegistro_Click" CssClass="btnRegistro" Text="Registrate" />
                         </div>
                     </div>
-                    <div class="contendor-img-perfil">
-                        <asp:Image runat="server" ID="imgPerfil" CssClass="img-registro-perfil" />
-                    </div>
+                    
                 </div>
+                <asp:Label runat="server" Text="" ID="lblRegistrado"></asp:Label>
             </div>
         </ContentTemplate>
     </asp:UpdatePanel>

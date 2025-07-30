@@ -82,12 +82,57 @@ namespace negocio
             AccesoDatos accesoDatos = new AccesoDatos();
             try
             {
+                accesoDatos.setearConsulta("insert into USERS (email,pass,nombre, apellido, urlImagenPerfil, admin) values( @email,@pass,@nombre,@apellido,@urlImagenPerfil,@admin)");
+                accesoDatos.setearParametro("@email", usuarioNuevo.Email);
+                accesoDatos.setearParametro("@pass", usuarioNuevo.Pass);
+                accesoDatos.setearParametro("@nombre", usuarioNuevo.Nombre);
+                accesoDatos.setearParametro("@apellido", usuarioNuevo.Apellido);
+                accesoDatos.setearParametro("@urlImagenPerfil", usuarioNuevo.UrlImagen);
+                accesoDatos.setearParametro("@admin", usuarioNuevo.TipoUsuario);
+
+                accesoDatos.ejecutarAccion();
 
             }
             catch (Exception)
             {
 
                 throw;
+            }
+            finally
+            {
+                accesoDatos.cerrarConexion();
+            }
+        }
+
+        public bool usuarioRegistrado(string email)
+        {
+            AccesoDatos accesoDatos = new AccesoDatos();
+            try
+            {
+                accesoDatos.setearConsulta("select * from USERS where email = @email");
+                accesoDatos.setearParametro("@email", email);
+                accesoDatos.ejecutarLectura();
+
+                if (accesoDatos.Lector.Read())
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+
+                
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            finally
+            {
+                accesoDatos.cerrarConexion();
             }
         }
     }
