@@ -15,15 +15,25 @@ namespace interfaz
         
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!Page.IsPostBack && Request.Url.AbsolutePath.ToLower().Contains("MenuUsuario.aspx"))
+            {
+                Response.Redirect("~/login");
+            }
             if (!IsPostBack)
             {
                 if (Session["usuario"] != null)
                 {
+
                     usuarioAux = (Usuario)Session["usuario"];
                     usuarioTxt.Text = usuarioAux.Nombre;
                     apellidoTxt.Text = usuarioAux.Apellido;
                     emailTxt.Text = usuarioAux.Email;
                    perfilTxt.Text = usuarioAux.UrlImagen.ToString();
+
+                    usuarioTxt.Enabled = false;
+                    apellidoTxt.Enabled= false;
+                    emailTxt.Enabled= false;
+
                 }
             }
         }

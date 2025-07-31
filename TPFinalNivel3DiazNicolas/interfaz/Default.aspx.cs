@@ -16,6 +16,10 @@ namespace interfaz
         
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!Page.IsPostBack && Request.Url.AbsolutePath.ToLower().Contains("default.aspx"))
+            {
+                Response.Redirect("~/inicio");
+            }
             if (!IsPostBack)
             {
                 ArticuloNegocio negocio = new ArticuloNegocio();

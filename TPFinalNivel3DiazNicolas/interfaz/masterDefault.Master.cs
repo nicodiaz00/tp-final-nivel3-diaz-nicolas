@@ -57,7 +57,8 @@ namespace interfaz
             }
             else
             {
-                Response.Redirect("MenuUsuario.aspx", false);
+                Response.Redirect(GetRouteUrl("login", null), false);
+                /*Response.Redirect("MenuUsuario.aspx", false);*/
             }
         }
     }

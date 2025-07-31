@@ -37,7 +37,7 @@ namespace interfaz
                     usuarioNegocio.registrarUsuario(nuevoUsuario);
                 }
                 else{
-                    lblRegistrado.Text = "Ya te registraste papu";
+                    lblRegistrado.Text = "Ya te registraste ";
                 }
                 
                 

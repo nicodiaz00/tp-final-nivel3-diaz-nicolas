@@ -126,19 +126,21 @@ header {
             color: inherit;
             display: inline;
             white-space: nowrap;
+            color:white;
         }
 /* clase al boton del nav */
 
 .button-a{
     display: inline-block;
     background-color: lightgray; /* Color azul tipo botón */
-    color: white;
+    
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 20px;
     transition: background-color 0.3s ease;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* sombra */
     border:none;
+    
 }
     .button-a:hover {
         background-color: rgba(0, 123, 255, 0.4); /* Color al pasar el mouse */
@@ -222,24 +224,32 @@ header {
     background-color:antiquewhite;
 }
 .panelUsuario {
-    margin-left: 20px;
+   
     background-color: grey;
     margin-top: 20px;
-    border-radius: 20px;
+    
     padding: 20px;
     width: 50%;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
 }
+.contenedor-perfil-user{
+    width:70%;
+    
+}
 .imagenPerfil {
     width: 30%;
     height: auto;
-    
     background-color: ghostwhite;
 }
 .panel-perfil{
-    width:50%;
+    width:80%;
+    background-color:palevioletred;
+    border-radius:20px;
+    display:flex;
+    flex-direction:row;
+
 }
 .img-usuario {
     max-width: 100%; /* Evita que se pase del contenedor */
