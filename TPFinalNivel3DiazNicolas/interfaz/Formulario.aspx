@@ -6,66 +6,69 @@
     <asp:ScriptManager runat="server" ID="scritpmanager1"></asp:ScriptManager>
     <asp:UpdatePanel runat="server" ID="updatePanel">
         <ContentTemplate>
-            <div class="rowFormulario">
-                <div class="col-8">
-                    <div class="container">
-                        <h2>Carga de articulos al inventario</h2>
+            <div class="div-formulario-main">
 
-                    </div>
+                <div class="titulo">
+                    <h2>Nuevo Articulo</h2>
                 </div>
+                <div class="contedor-cargar-articulo">
+                    <div class="formulario-articulos">
+                        <div class="div-form-carga">
+                            <label for="ID" class="label-carga">ID</label>
+                            <asp:TextBox runat="server" ID="txtId" CssClass="txtbox-carga"></asp:TextBox>
+                        </div>
+                        <div class="div-form-carga">
+                            <label for="Codigo" class="label-carga">Codigo</label>
+                            <asp:TextBox runat="server" ID="txtCodigo" CssClass="txtbox-carga"></asp:TextBox>
+                        </div>
+                        <div class="div-form-carga">
+                            <label for="Nombre" class="label-carga">Nombre</label>
+                            <asp:TextBox runat="server" ID="txtNombre" CssClass="txtbox-carga"></asp:TextBox>
+                        </div>
+                        <div class="div-form-carga-descripcion">
+                            <label for="Descripcion" class="label-carga">Descripcion</label>
+                            <asp:TextBox runat="server" ID="txtDescripcion" CssClass="txtbox-descripcion" TextMode="MultiLine"></asp:TextBox>
+                        </div>
+
+                        <div class="div-form-carga">
+
+                            <label for="Marca" class="label-carga">Marca</label>
+                            <asp:DropDownList runat="server" ID="ddlMarca" CssClass="txtbox-carga"></asp:DropDownList>
+
+                        </div>
+                        <div class="div-form-carga">
+
+                            <label for="Categoria" class="label-carga">Categoria</label>
+                            <asp:DropDownList runat="server" ID="ddlCategoria" CssClass="txtbox-carga"></asp:DropDownList>
+
+
+
+                        </div>
+                        <div class="div-form-carga">
+                            <label for="Precio" class="label-carga">Precio</label>
+                            <asp:TextBox CssClass="txtbox-carga" ID="txtPrecio" runat="server"></asp:TextBox>
+                        </div>
+                        <div class="div-form-carga">
+                            <label for="urlImagen" class="label-carga">Imagen</label>
+                            <asp:TextBox CssClass="txtbox-carga" ID="txtImagen" runat="server"></asp:TextBox>
+                        </div>
+                        <div class="div-form-btn">
+                            <asp:Button runat="server" ID="btnCargarArticulo" CssClass="btn-cargar-articulo" Text="Cargar" OnClick="btnCargarArticulo_Click" />
+                            <asp:Button runat="server" ID="btnCancelarArticulo" CssClass="btn-cancelar-articulo" Text="Cancelar" OnClick="btnCancelarArticulo_Click" />
+
+
+                        </div>
+                    </div>
+                    <div class="div-imagen-articulo">
+
+                        <asp:Image ID="Image1" runat="server" ImageUrl="https://img.freepik.com/free-vector/illustration-gallery-icon_53876-27002.jpg" />
+                    </div>
+
+
+                </div>
+
             </div>
-            <div class="row">
-                <div class="col-8">
-                    <div class="mb-4">
-                        <label for="ID" class="form-label">ID</label>
-                        <asp:TextBox runat="server" ID="txtId" CssClass="form-control"></asp:TextBox>
-                    </div>
-                    <div class="mb-4">
-                        <label for="Codigo" class="form-label">Codigo</label>
-                        <asp:TextBox runat="server" ID="txtCodigo" CssClass="form-control"></asp:TextBox>
-                    </div>
-                    <div class="mb-4">
-                        <label for="Nombre" class="form-label">Nombre</label>
-                        <asp:TextBox runat="server" ID="txtNombre" CssClass="form-control"></asp:TextBox>
-                    </div>
-                    <div class="mb-4">
-                        <label for="Descripcion" class="form-label">Descripcion</label>
-                        <asp:TextBox runat="server" ID="txtDescripcion" CssClass="form-control" TextMode="MultiLine"></asp:TextBox>
-                    </div>
 
-                    <div class="mb-4">
-                        <div>
-                            <label for="Marca" class="form-label">Marca</label>
-                        </div>
-                        <div>
-                            <asp:DropDownList runat="server" ID="ddlMarca"></asp:DropDownList>
-                        </div>
-
-
-                    </div>
-                    <div class="mb-4">
-                        <div>
-                            <label for="Categoria" class="form-label">Categoria</label>
-                        </div>
-                        <div>
-                            <asp:DropDownList runat="server" ID="ddlCategoria"></asp:DropDownList>
-                        </div>
-                    </div>
-                    <div class="mb-4">
-                        <label for="Precio" class="form-label">Precio</label>
-                        <asp:TextBox CssClass="form-control" ID="txtPrecio" runat="server"></asp:TextBox>
-                    </div>
-
-
-                </div>
-                <div class="col-4">
-                    <div class="mb-4">
-                        <label for="urlImagen" class="form-label">Imagen</label>
-                        <asp:TextBox CssClass="form-control" ID="txtImagen" runat="server"></asp:TextBox>
-                    </div>
-                    <asp:Image ID="Image1" runat="server" ImageUrl="https://img.freepik.com/free-vector/illustration-gallery-icon_53876-27002.jpg"/>
-                </div>
-            </div>
         </ContentTemplate>
     </asp:UpdatePanel>
 

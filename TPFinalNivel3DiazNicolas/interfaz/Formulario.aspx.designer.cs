@@ -105,6 +105,24 @@ namespace interfaz
         protected global::System.Web.UI.WebControls.TextBox txtImagen;
 
         /// <summary>
+        /// Control btnCargarArticulo.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnCargarArticulo;
+
+        /// <summary>
+        /// Control btnCancelarArticulo.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnCancelarArticulo;
+
+        /// <summary>
         /// Control Image1.
         /// </summary>
         /// <remarks>

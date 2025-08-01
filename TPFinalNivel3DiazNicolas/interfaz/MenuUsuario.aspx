@@ -8,14 +8,18 @@
     <div class="contenedor-main-usuario">
         <%if (Session["usuario"] == null)
             {%>
+        
         <div class="contendor-login">
+            <div class="titulo-login">
+                <h3>Inicia Sesion</h3>
+            </div>
             <div class="contendor-user">
                 <label for="usuarioText" class="label-user">Usuario</label>
                 <asp:TextBox runat="server" ID="emailUserTxt" CssClass="txtUser"></asp:TextBox>
             </div>
             <div class="contendor-pass">
                 <label for="usuarioPass" class="label-user-pass">Contraseña</label>
-                <asp:TextBox runat="server" ID="emailPassTxt" CssClass="txtPass"></asp:TextBox>
+                <asp:TextBox runat="server" ID="emailPassTxt" CssClass="txtPass" TextMode="Password"></asp:TextBox>
 
             </div>
             <div class="contendor-btn">
@@ -34,23 +38,23 @@
 
 
             <div class="contenedor-perfil-user">
-                <div class="">
+                <div class="div-form">
                     <label for="Nombre" class="form-label">Nombre</label>
-                    <asp:TextBox runat="server" ID="usuarioTxt" CssClass="form-control"></asp:TextBox>
+                    <asp:TextBox runat="server" ID="usuarioTxt" CssClass="asp-form"></asp:TextBox>
                 </div>
-                <div class="">
+                <div class="div-form">
                     <label for="Apellido" class="form-label">Apellido</label>
-                    <asp:TextBox runat="server" ID="apellidoTxt" CssClass="form-control"></asp:TextBox>
+                    <asp:TextBox runat="server" ID="apellidoTxt" CssClass="asp-form"></asp:TextBox>
                 </div>
-                <div class="">
+                <div class="div-form">
                     <label for="Email" class="form-label">Email</label>
-                    <asp:TextBox runat="server" ID="emailTxt" CssClass="form-control"></asp:TextBox>
+                    <asp:TextBox runat="server" ID="emailTxt" CssClass="asp-form"></asp:TextBox>
                 </div>
-                <div class="">
+                <div class="div-form">
                     <label for="imgPerfil" class="form-label">Imagen Perfil</label>
-                    <asp:TextBox runat="server" ID="perfilTxt" CssClass="form-control"></asp:TextBox>
+                    <asp:TextBox runat="server" ID="perfilTxt" CssClass="asp-form"></asp:TextBox>
                 </div>
-                <div class="mb-4 btn-gestion">
+                <div class="div-form">
                     <asp:Button runat="server" ID="btnGestion" Text="Gestionar sitio" CssClass="btn btn-primary" OnClick="btnGestion_Click" />
                     <asp:Button runat="server" ID="btnEditarPerfil" Text="Editar perfil" CssClass="btn btn-primary" OnClick="btnEditarPerfil_Click" />
                     <asp:Button runat="server" ID="btnGuardarPerfil" Text="Guardar" CssClass="btn btn-primary" Enabled="false" />

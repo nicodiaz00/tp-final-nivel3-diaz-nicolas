@@ -13,5 +13,15 @@ namespace interfaz
         {
 
         }
+
+        protected void btnCargarArticulo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void btnCancelarArticulo_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
