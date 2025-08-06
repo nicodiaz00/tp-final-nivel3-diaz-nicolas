@@ -44,7 +44,7 @@ namespace negocio
                 }
                 return listaArticulo;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
 
                 throw;
@@ -140,7 +140,7 @@ namespace negocio
 
                 return listaArticulos;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
 
                 throw ;
@@ -188,7 +188,7 @@ namespace negocio
                 return articulo;
             }
 
-            catch (Exception ex)
+            catch (Exception)
             {
                 throw;
                 

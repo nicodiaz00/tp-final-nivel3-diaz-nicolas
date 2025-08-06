@@ -530,6 +530,8 @@ header {
             border-radius: 20px;
         }
 /*pantalla carga articulo*/
+
+
 .div-formulario-main{
     
     height:80vh;
@@ -550,20 +552,27 @@ header {
     margin-right: 0.5%;
     display: flex;
     flex-direction: column;
-    width: 40%;
-    background-color:white;
-    border-radius: 10px;
-    box-shadow: 3px 1px 3px rgba(0, 0, 0, 0.2);
+    width: 50%;
+    
+    
 }
 .div-imagen-articulo{
     display:flex;
-    width:40%;
-}
-.div-form-carga{
-    width:100%;
+    width:50%;
     
-    display:flex;
-    flex-direction:column;
+    
+    justify-content:center;
+    align-items:center;
+}
+.asp-imagen-articulo {
+    width: 70%;
+    border-radius: 10px;
+    box-shadow: 3px 1px 3px rgba(0, 0, 0, 0.2);
+}
+.div-form-carga {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 .div-form-carga-descripcion{
     height:15%;
@@ -572,7 +581,7 @@ header {
 
 }
 .txtbox-descripcion {
-    width: 40%;
+    width: 70%;
     margin-left: 1.5%;
     border: 1px solid transparent;
     border-radius: 10px;
@@ -586,7 +595,7 @@ header {
     margin-left: 1.5%;
 }
 .txtbox-carga {
-    width: 40%;
+    width: 70%;
     margin-left: 1.5%;
     border: 1px solid transparent;
     border-radius: 10px;
@@ -611,7 +620,7 @@ header {
 
 }
 .btn-cargar-articulo {
-    width: 15%;
+    width: 25%;
     display: inline-block;
     background-color: lightgray; /* Color azul tipo botón */
     color: white;
@@ -622,19 +631,47 @@ header {
     transition: background-color 0.3s ease;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* sombra */
     border: none;
-    margin-left: 2%;
+    margin-left: 3%;
     margin-top: 4%;
 }
     .btn-cargar-articulo:hover {
         background-color: rgba(0, 123, 255, 0.4); /* Color al pasar el mouse */
         color: white;
     }
+.btn-cancelar-articulo {
+    width: 25%;
+    display: inline-block;
+    background-color: lightgray; /* Color azul tipo botón */
+    color: white;
+    padding: 10px 10px;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* sombra */
+    border: none;
+    margin-left: 3%;
+    margin-top: 4%;
+}
+    .btn-cancelar-articulo:hover {
+        background-color: rgba(202, 7, 7, 0.95); /* Color al pasar el mouse */
+        color: white;
+    }
+.contenedor-form-and-image {
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    width: 40%;
+    border-radius: 10px;
+    box-shadow: 3px 1px 3px rgba(0, 0, 0, 0.2);
+}
 /*PANTALLA EDITAR ARTICULO*/
 .contendor-editar {
     height: 100vh;
     width: 100%;
     display: flex;
     flex-direction: column;
+    background-color
 }
 
 .contenedor-titulo-editar {

@@ -29,6 +29,23 @@ namespace Helper
 
                 return usuario;         
         }
+
+        public static Articulo crearArticulo(string codigo, string nombre, string descripcion, string marca, string categoria, decimal precio, string imagen )
+        {
+            Articulo articulo = new Articulo();
+            articulo.Codigo = codigo;
+            articulo.Nombre = nombre;
+            articulo.Descripcion = descripcion;
+            articulo.Marca.DescripcionMarca = marca;
+            articulo.Categoria.DescripcionCategoria = categoria;
+            articulo.Precio = precio;
+            articulo.ImagenUrl = imagen;
+
+
+
+            return articulo;
+
+        }
     }
 
 

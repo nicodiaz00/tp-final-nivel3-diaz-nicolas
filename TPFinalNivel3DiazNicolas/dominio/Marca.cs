@@ -15,5 +15,10 @@ namespace dominio
         {
             return DescripcionMarca;
         }
+
+        public static implicit operator Marca(string v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
