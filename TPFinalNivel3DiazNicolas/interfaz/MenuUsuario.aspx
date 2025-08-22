@@ -19,7 +19,7 @@
             </div>
             <div class="contendor-pass">
                 <label for="usuarioPass" class="label-user-pass">Contraseña</label>
-                <asp:TextBox runat="server" ID="emailPassTxt" CssClass="txtPass" TextMode="Password"></asp:TextBox>
+                <asp:TextBox runat="server" ID="emailPassTxt" CssClass="txtPass" TextMode="Password" AutoCompleteType="Disabled"></asp:TextBox>
 
             </div>
             <div class="contendor-btn">

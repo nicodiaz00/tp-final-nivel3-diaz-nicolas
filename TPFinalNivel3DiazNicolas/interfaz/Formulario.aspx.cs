@@ -12,6 +12,7 @@ namespace interfaz
     public partial class Formulario : System.Web.UI.Page
     {
         private List<Marca> listadoMarca { get; set; }
+        private List<Categoria> listadoCategoria {  get; set; }
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -29,6 +30,15 @@ namespace interfaz
                     ddlMarca.DataTextField = "DescripcionMarca";
                     ddlMarca.DataValueField = "Id";
                     ddlMarca.DataBind();
+
+                    CategoriaNegocio categoriaNegocio = new CategoriaNegocio();
+                    listadoCategoria = new List<Categoria>();
+                    listadoCategoria = categoriaNegocio.listarCategoria();
+
+                    ddlCategoria.DataSource = listadoCategoria;
+                    ddlCategoria.DataTextField = "DescripcionCategoria";
+                    ddlCategoria.DataValueField = "Id";
+                    ddlCategoria.DataBind();
 
                 }
                 catch (Exception)
