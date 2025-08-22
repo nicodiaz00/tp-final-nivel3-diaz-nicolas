@@ -58,7 +58,24 @@ namespace interfaz
 
         protected void btnCargarArticulo_Click(object sender, EventArgs e)
         {
+            int idMarca = Convert.ToInt32(ddlMarca.SelectedValue);
+            int idCategoria = Convert.ToInt32(ddlCategoria.SelectedValue);
+            decimal precio = Convert.ToDecimal(txtPrecio.Text);
 
+            try
+            {
+                ArticuloNegocio articuloNegocio = new ArticuloNegocio();
+
+                articuloNegocio.crearArticulo(txtCodigo.Text, txtNombre.Text, txtDescripcion.Text, idMarca, idCategoria, txtImagen.Text, precio);
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+           
+           
         }
 
         protected void btnCancelarArticulo_Click(object sender, EventArgs e)

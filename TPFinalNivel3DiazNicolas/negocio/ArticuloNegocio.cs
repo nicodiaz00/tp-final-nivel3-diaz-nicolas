@@ -10,11 +10,11 @@ namespace negocio
 {
     public class ArticuloNegocio
     {
-        
+
         public List<Articulo> listarArticulo()
-        {   
-            
-            List<Articulo> listaArticulo= new List<Articulo>();
+        {
+
+            List<Articulo> listaArticulo = new List<Articulo>();
             AccesoDatos accesodatos = new AccesoDatos();
             try
             {
@@ -28,7 +28,7 @@ namespace negocio
                     articulo.Codigo = (string)accesodatos.Lector["Codigo"];
                     articulo.Nombre = (string)accesodatos.Lector["Nombre"];
                     articulo.Descripcion = (string)accesodatos.Lector["Descripcion"];
-                    articulo.Precio = Math.Round((decimal)accesodatos.Lector["Precio"],2);
+                    articulo.Precio = Math.Round((decimal)accesodatos.Lector["Precio"], 2);
                     articulo.ImagenUrl = (string)accesodatos.Lector["ImagenUrl"];
                     articulo.Marca = new Marca();
                     articulo.Marca.Id = (int)accesodatos.Lector["IdMarca"];
@@ -39,7 +39,7 @@ namespace negocio
                     articulo.Categoria.DescripcionCategoria = (string)accesodatos.Lector["Categoria"];
 
                     listaArticulo.Add(articulo);
-                    
+
 
                 }
                 return listaArticulo;
@@ -53,11 +53,11 @@ namespace negocio
             {
                 accesodatos.cerrarConexion();
             }
-            
+
         }
-        public List<Articulo>filtrarArticulo(string campo,string criterio,string filtro)
+        public List<Articulo> filtrarArticulo(string campo, string criterio, string filtro)
         {
-            List<Articulo>listaArticulos = new List<Articulo>();
+            List<Articulo> listaArticulos = new List<Articulo>();
             AccesoDatos accesoDatos = new AccesoDatos();
             try
             {
@@ -143,7 +143,7 @@ namespace negocio
             catch (Exception)
             {
 
-                throw ;
+                throw;
             }
         }
         public Articulo seleccionarArticulo(string id)
@@ -159,10 +159,10 @@ namespace negocio
 
                 while (accesoDatos.Lector.Read())
                 {
-                     articulo = new Articulo();
+                    articulo = new Articulo();
 
 
-                    
+
                     articulo.Id = (int)accesoDatos.Lector["Id"];
                     articulo.Codigo = (string)accesoDatos.Lector["Codigo"];
                     articulo.Nombre = (string)accesoDatos.Lector["Nombre"];
@@ -182,7 +182,7 @@ namespace negocio
                     articulo.Categoria.Id = (int)accesoDatos.Lector["IdCategoria"];
                     articulo.Categoria.DescripcionCategoria = (string)accesoDatos.Lector["Categoria"];
 
-                    
+
                 }
 
                 return articulo;
@@ -191,8 +191,38 @@ namespace negocio
             catch (Exception)
             {
                 throw;
-                
+
             }
+
+        }
+        public void crearArticulo(string codigo, string nombre, string descripcion, int idMarca, int idCategoria, string imgUrl, decimal precio)
+        {
+            AccesoDatos accesoDatos = new AccesoDatos();
+            try
+            {
+                accesoDatos.setearConsulta("Insert into ARTICULOS(Codigo,Nombre,Descripcion,IdMarca,IdCategoria,ImagenUrl,Precio) values(@Codigo,@Nombre,@Descripcion,@Idmarca,@IdCategoria,@ImagenUrl,@Precio)");
+                accesoDatos.setearParametro("@Codigo", codigo);
+                accesoDatos.setearParametro("@Nombre", nombre);
+                accesoDatos.setearParametro("@Descripcion", descripcion);
+                accesoDatos.setearParametro("@IdMarca", idMarca);
+                accesoDatos.setearParametro("@IdCategoria", idCategoria);
+                accesoDatos.setearParametro("@ImagenUrl", imgUrl);
+                accesoDatos.setearParametro("@Precio", precio);
+
+
+                accesoDatos.ejecutarAccion();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            finally
+            {
+                accesoDatos.cerrarConexion();
+            }
+
+
 
         }
     }
