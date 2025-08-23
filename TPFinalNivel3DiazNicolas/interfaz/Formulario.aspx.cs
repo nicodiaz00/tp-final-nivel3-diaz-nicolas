@@ -68,11 +68,31 @@ namespace interfaz
 
                 articuloNegocio.crearArticulo(txtCodigo.Text, txtNombre.Text, txtDescripcion.Text, idMarca, idCategoria, txtImagen.Text, precio);
 
+
+
+                lblMensaje.Text = "¡El artículo se cargó correctamente!";
+                pnlMensaje.Visible = true;
+
+                btnCargarArticulo.Enabled = false;
+                btnCargarArticulo.CssClass = "btn-cargar-articulo disabled";
+                btnCancelarArticulo.Enabled = false;
+                btnCancelarArticulo.CssClass = "btn-cancelar-articulo disabled";
+                txtNombre.Enabled = false;
+                txtCodigo.Enabled = false;
+                txtDescripcion.Enabled = false;
+                txtPrecio.Enabled = false;
+                txtImagen.Enabled = false;
+                ddlMarca.Enabled = false;
+                ddlCategoria.Enabled = false;
+
+
+
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
-                throw;
+                lblMensaje.Text = "Error: " + ex.Message;
+                pnlMensaje.Visible = true;
             }
            
            
@@ -80,12 +100,43 @@ namespace interfaz
 
         protected void btnCancelarArticulo_Click(object sender, EventArgs e)
         {
-
+            txtNombre.Text = "";
+            txtCodigo.Text = "";
+            txtDescripcion.Text = "";
+            txtPrecio.Text = "";
+            txtImagen.Text = "";
+            ddlMarca.SelectedIndex = 0;
+            ddlCategoria.SelectedIndex = 0;
         }
 
         protected void txtImagen_TextChanged(object sender, EventArgs e)
         {
             Image1.ImageUrl = txtImagen.Text.Trim();
+        }
+
+        protected void btnAceptarMensaje_Click(object sender, EventArgs e)
+        {
+            pnlMensaje.Visible = false;
+            btnCargarArticulo.Enabled = true;
+            btnCargarArticulo.CssClass = "btn-cargar-articulo";
+            btnCancelarArticulo.Enabled = true;
+            btnCancelarArticulo.CssClass = "btn-cancelar-articulo";
+            txtNombre.Enabled = true;
+            txtCodigo.Enabled = true;
+            txtDescripcion.Enabled = true;
+            txtPrecio.Enabled = true;
+            txtImagen.Enabled = true;
+            ddlMarca.Enabled = true;
+            ddlCategoria.Enabled = true;
+
+            // Limpiar los campos si querés
+            txtNombre.Text = "";
+            txtCodigo.Text = "";
+            txtDescripcion.Text = "";
+            txtPrecio.Text = "";
+            txtImagen.Text = "";
+            ddlMarca.SelectedIndex = 0;
+            ddlCategoria.SelectedIndex = 0;
         }
     }
 }

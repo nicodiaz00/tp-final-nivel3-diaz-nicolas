@@ -74,6 +74,7 @@
     <Content Include="Default.aspx" />
     <Content Include="Formulario.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="Js\script.js" />
     <Content Include="Listado.aspx" />
     <Content Include="MenuUsuario.aspx" />
     <Content Include="Registro.aspx" />

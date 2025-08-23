@@ -125,7 +125,13 @@ namespace interfaz
 
         protected void dgvArticulos_PageIndexChanging(object sender, GridViewPageEventArgs e)
         {
+            dgvArticulos.PageIndex = e.NewPageIndex;
 
+            if (Session["listadoArticulo"] != null)
+            {
+                dgvArticulos.DataSource = Session["listadoArticulo"];
+                dgvArticulos.DataBind();
+            }
         }
     }
 }
