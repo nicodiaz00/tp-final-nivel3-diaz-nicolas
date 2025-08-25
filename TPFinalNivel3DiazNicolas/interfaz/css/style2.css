@@ -25,8 +25,8 @@
     flex-direction: column;
     background-color: white;
     align-items: center;
-    width: 16%;
-    height: 55%;
+    width: 19%;
+    height: 20%;
     border: none;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     transition: transform 0.4s ease, box-shadow 0.4s ease;
@@ -187,20 +187,30 @@ header {
         color: white;
     }
 
-.contenedor-logo, .menu-navegacion, .menu-login {
-    width: 33.33%;
+.contenedor-logo, .menu-login,.menu-navegacion {
+    width: 33%;
     display: flex;
     flex-direction: row;
     align-items: center;
+}
+.menu-login{
+    align-items:center;
+    justify-content:center;
 }
 
 .oculto {
     display: none;
 }
+.div-banner{
+    height:40%;
+    width:100%;
+    background-color:red;
+    display:flex;
 
+}
 #row-art {
     display: flex;
-    height: 80vh;
+    height: 40vh;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -958,3 +968,204 @@ header {
     justify-content:center;
 
 }
+
+/*CARRUSEL*/
+.carrusel-container {
+    position: relative;
+    width: 100%;
+   
+    overflow: hidden;
+    
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* ----- Carrusel (usa Flexbox) ----- */
+.carrusel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%; /* 3 imágenes */
+}
+
+/* ----- Cada slide ----- */
+.slide {
+    min-width: 100%;
+    flex-shrink: 0;
+}
+
+    .slide img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+/* ----- Botones de navegación ----- */
+.btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+    cursor: pointer;
+    
+    transition: background 0.3s ease;
+    z-index: 10;
+}
+
+    .btn:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+
+.prev {
+    left: 15px;
+}
+
+.next {
+    right: 15px;
+}
+
+/* ----- Responsive ----- */
+@media only screen and (max-width: 600px) {
+    body {
+        width: auto; /* o implícitamente 100% del viewport */
+    }
+
+    .btn {
+        font-size: 18px;
+        padding: 8px;
+    }
+
+    header {
+        width: 100%;
+        height:5%;
+        display: flex;
+    }
+
+    .contenedor-header {
+        height: 100%;
+        width: 100%;
+        
+        display: flex;
+        flex-direction: row;
+    }
+
+    .contenedor-logo {
+        width: 70%;
+        background-color: rebeccapurple;
+    }
+    .menu-mobile{
+        display:flex;
+        width:30%;
+        align-items:center;
+        justify-content:center;
+    }
+    .btn-menu-burger {
+        cursor: pointer;
+        color: black;
+        font-size: 30px;
+    }
+
+
+    .menu-navegacion {
+        width: 45%;
+        background-color: yellow;
+        overflow: hidden; /* evita que se desborde contenido */
+        box-sizing: border-box; /* incluye padding y border dentro del ancho */
+        display: flex;
+        justify-content: center;
+    }
+
+    .menu-navegacion ul {
+        list-style: none; /* quita los bullets */
+        padding: 0; /* elimina padding por defecto */
+        margin: 0; /* elimina margin por defecto */
+        display: flex; /* opcional: si querés que los <li> queden en fila */
+        flex-direction:column;
+        justify-content:center;
+        
+       
+    }
+
+    .button-a {
+        font-size: 0.9em;
+        width: 100%;
+    }
+
+
+    .menu-navegacion li {
+        flex: 1; /* opcional: que cada <li> ocupe el mismo ancho */
+        box-sizing: border-box;
+    }
+
+    .menu-login {
+        background-color: greenyellow;
+        width: 45%;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        
+    }
+    .menu-login > ul{
+        display:flex;
+        flex-direction:column;
+    }
+    .btn-mi-cuenta{
+        font-size:0.9em;
+        width:100%;
+    }
+
+    .menu-overlay {
+        display: none; /* Oculto por defecto */
+        position: fixed; /* Fijo para cubrir toda la pantalla */
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.85);
+        z-index: 999; /* Por encima de todo */
+    }
+    .menu-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+    }
+
+        .menu-content ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+
+        .menu-content li {
+            margin: 15px 0;
+        }
+
+            .menu-content li a {
+                color: white;
+                font-size: 24px;
+                text-decoration: none;
+            }
+
+    .close-btn {
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        font-size: 38px;
+        color: white;
+        cursor: pointer;
+    }
+
+}
+
+    
+
+
+
+
+
