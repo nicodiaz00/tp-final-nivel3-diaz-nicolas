@@ -41,6 +41,7 @@ namespace interfaz
                 
                 opcionesMenu.Add(new { nombre = "Listado", direccion = "Listado.aspx" });
                 opcionesMenu.Add(new { nombre = "Nuevo Articulo", direccion = "Formulario.aspx" });
+                opcionesMenu.Add(new { nombre = "Mi cuenta", direccion = "MenuUsuario.aspx" });
                 opcionesMenu.Add(new { nombre = "Cerrar Sesion", direccion = "Salida.aspx" });
 
 
