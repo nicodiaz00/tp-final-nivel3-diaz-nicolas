@@ -91,11 +91,10 @@ header {
     width: 100%;
     height: 150px;
 }
-
-.contenedor-header {
-    display: flex;
-    flex-direction: row;
-    height: 100%;
+.contenedor-header{
+    width:100%;
+    display:flex;
+    background-color:yellow;
 }
 
 
@@ -188,7 +187,7 @@ header {
     }
 
 .contenedor-logo, .menu-login,.menu-navegacion {
-    width: 33%;
+    width: 20%;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -1025,7 +1024,23 @@ header {
 .next {
     right: 15px;
 }
-
+.menu-overlay {
+    display: none; /* Oculto por defecto */
+    position: fixed; /* Fijo para cubrir toda la pantalla */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.85);
+    z-index: 999; /* Por encima de todo */
+}
+.menu-mobile{
+    display:flex;
+    background-color:red;
+    width:80%;
+    align-items:center;
+    justify-content:center;
+}
 /* ----- Responsive ----- */
 @media only screen and (max-width: 600px) {
     body {
@@ -1116,16 +1131,7 @@ header {
         width:100%;
     }
 
-    .menu-overlay {
-        display: none; /* Oculto por defecto */
-        position: fixed; /* Fijo para cubrir toda la pantalla */
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0,0,0,0.85);
-        z-index: 999; /* Por encima de todo */
-    }
+    
     .menu-content {
         display: flex;
         flex-direction: column;
@@ -1140,16 +1146,24 @@ header {
             padding: 0;
             margin: 0;
             text-align: center;
+            display:flex;
+            flex-direction:column;
+            width:90%;
+            justify-content:center;
+            align-items:center;
         }
 
         .menu-content li {
             margin: 15px 0;
+            display:flex;
+            justify-content:center;
         }
 
             .menu-content li a {
-                color: white;
-                font-size: 24px;
+                color: black;
+                font-size: 1.3em;
                 text-decoration: none;
+                
             }
 
     .close-btn {
@@ -1159,6 +1173,18 @@ header {
         font-size: 38px;
         color: white;
         cursor: pointer;
+    }
+
+    .li-menu-mobile {
+        background-color: red;
+        display: flex;
+        width: 60%;
+        height: 30%;
+        padding: 10px;
+        border-radius: 10px;
+        background-color: lightgray;
+        border: none;
+        
     }
 
 }

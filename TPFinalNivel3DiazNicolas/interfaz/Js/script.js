@@ -1,100 +1,65 @@
-﻿function abrirModal() {
-    console.trace("abrirModal se ejecutó");
-    document.getElementById("modalId").style.display = "flex";
-}
-
-function cerrarModal() {
+﻿
+function crearMenuEscritorio(opciones) {
+    ulList = document.createElement("ul");
     
-    document.getElementById("modalId").style.display = "none";
-}
-/*
-const carrusel = document.querySelector(".carrusel");
-const slides = document.querySelectorAll(".slide");
-const prevBtn = document.querySelector(".prev");
-const nextBtn = document.querySelector(".next");
+    ulList.classList.add("estilo-ul-menu");
+    ulList.innerHTML = "";
 
-let index = 0;
-const totalSlides = slides.length;
-let autoSlide;
-
-// ----- Función para actualizar el carrusel -----
-function mostrarSlide(n) {
-    if (n < 0) {
-        index = totalSlides - 1;
-    } else if (n >= totalSlides) {
-        index = 0;
-    } else {
-        index = n;
-    }
-    carrusel.style.transform = `translateX(${-index * 100}%)`;
-}
-
-// ----- Botones manuales -----
-prevBtn.addEventListener("click", () => {
-    mostrarSlide(index - 1);
-    reiniciarAutoSlide();
-});
-
-nextBtn.addEventListener("click", () => {
-    mostrarSlide(index + 1);
-    reiniciarAutoSlide();
-});
-
-// ----- Auto deslizamiento cada 3s -----
-function iniciarAutoSlide() {
-    autoSlide = setInterval(() => {
-        mostrarSlide(index + 1);
-    }, 3000);
-}
-
-// Reinicia el temporizador al hacer clic
-function reiniciarAutoSlide() {
-    clearInterval(autoSlide);
-    iniciarAutoSlide();
-}
-*/
-const divMenu = document.createElement("div");
-const burgerButton = document.getElementById("burger");
-
-const opcionesMenu = [
-     {
-        nombre: "Listado",
-        direccion: "Listado.aspx"
-    },
-    {
-        nombre: "Listado",
-        direccion: "Listado.aspx"
-    },
-    {
-        nombre: "Nuevo Articulo",
-        direccion: "Formulario.aspx"
-    }
-
-];
-function createMenumobile(opciones) {
-    
-    const ul = document.createElement("ul");
-    const menuContent = document.createElement("div");
-    menuContent.classList.add("menu-mobile-content");
-
-    for (let i = 0; i < opciones.length; i++) {
+    opciones.forEach(opcion => {
         const li = document.createElement("li");
+        li.classList.add("li-menu-escritorio")
         const a = document.createElement("a");
-        a.href = opciones[i].direccion;
-        a.textContent = opciones[i].nombre;
+        a.href = opcion.direccion;
+        a.textContent = opcion.nombre;
+        li.appendChild(a)
+        ulList.appendChild(li);
 
-        li.appendChild(a);
-        ul.appendChild(li)
-
-    }
-    menuContent.appendChild(ul);
-    return menuContent;
+    });
+    return ulList;
 }
+function crearContenedor() {
+    const div = document.createElement("div");
 
-function createMenu() {
+    div.classList.add("btn-menu-burger");
+ 
+    div.id = "burger";
+ 
+    const icono = document.createTextNode("☰");
+  
+    div.appendChild(icono);
+
+    div.addEventListener("click", () => {
+        console.log("hicisteclick");
+        createMenu(opcionesMenu);
+        menuOverlay.style.display = "block";
+        document.body.style.overflow = "hidden";
+    });
+
+    const closeMenu = document.getElementById("closeMenu");
+    if (closeMenu) {
+        closeMenu.addEventListener("click", () => {
+            menuOverlay.style.display = "none";
+            document.body.style.overflow = "auto";
+        });
+    }
+
+    menuOverlay.addEventListener("click", e => {
+        if (e.target === menuOverlay) {
+            menuOverlay.style.display = "none";
+            document.body.style.overflow = "auto";
+        }
+    });
+
+    return div;
+
+}
+function createMenu(opciones) {
+    
+    console.log("createMenu se ejecutó");
     menuItems.innerHTML = ""; // Limpiar antes de crear
-    opcionesMenu.forEach(opcion => {
+    opciones.forEach(opcion => {
         const li = document.createElement("li");
+        li.classList.add("li-menu-mobile")
         const a = document.createElement("a");
         a.href = opcion.direccion;
         a.textContent = opcion.nombre;
@@ -103,55 +68,84 @@ function createMenu() {
     });
 }
 
+function actualizarMenu() {
+    const menuHeader = document.querySelector(".menu-mobile");
+    menuHeader.innerHTML = "";
+    // Evitar agregar varias veces el contenedor
 
-burgerButton.addEventListener("click", () => {
-
-    createMenu();
-    menuOverlay.style.display = "block";
-    document.body.style.overflow = "hidden"; // Evita scroll en background
-})
-closeMenu.addEventListener("click", () => {
-    menuOverlay.style.display = "none";
-    document.body.style.overflow = "auto";
-});
-
-// Cerrar haciendo clic fuera del contenido
-menuOverlay.addEventListener("click", e => {
-    if (e.target === menuOverlay) {
-        menuOverlay.style.display = "none";
-        document.body.style.overflow = "auto";
+    if (window.innerWidth > 700) {
+        menuHeader.appendChild(crearMenuEscritorio(opcionesMenu));
+    } else {
+        menuHeader.appendChild(crearContenedor());
     }
-});
 
-
-
-/*iniciarAutoSlide();*/
-
-
+}
 /*
-<div class="menu-mobile-1">
-                        <ul>
-                            <li>
-                                <a href="Articulo.aspx">Articulos</a>
-                            </li>
-                            <li>
-                                <a href="Listado.aspx">Listado</a>
-                            </li>
-                            <li>
-                                <a href="#">Mi cuenta</a>
-                            </li>
-                            
-                        </ul>
-                    </div>
-                    <div class="menu-mobile-2">
-                        <ul>
-                            <li>
-                                <a href="#">Log in</a>
-                            </li>
-                            <li>
-                                <a href="#">Sign up</a>
-                            </li>
-                        </ul>
-                    </div>
-                    */
+document.addEventListener("DOMContentLoaded", function () {
+    const menuItems = document.getElementById("menuItems");
+    const menuHeader = document.querySelector(".menu-mobile");
+    const burgerButton = document.querySelector(".btn-menu-burger");
+    const menuOverlay = document.getElementById("menuOverlay");
 
+    // ⚡ Generar menú dinámicamente desde opcionesMenu (pasado desde el code-behind)
+    if (typeof opcionesMenu !== "undefined" && Array.isArray(opcionesMenu)) {
+        opcionesMenu.forEach(opcion => {
+            const li = document.createElement("li");
+            const a = document.createElement("a");
+            a.href = opcion.direccion;
+            a.textContent = opcion.nombre;
+            li.appendChild(a);
+            menuItems.appendChild(li);
+        });
+    } else {
+        console.error("No se encontraron opciones para el menú");
+    }
+
+    // ⚡ Evento para abrir el menú móvil
+    console.log(burgerButton)
+    if (burgerButton) {
+        burgerButton.addEventListener("click", () => {
+            console.log("hicisteclick");
+            createMenu(opcionesMenu);
+            menuOverlay.style.display = "block";
+            document.body.style.overflow = "hidden"; // Bloquear scroll
+        });
+    } else {
+        console.error("No se encontró el botón burger");
+    }
+
+    // ⚡ Evento para cerrar el menú al hacer click en la X
+    const closeMenu = document.getElementById("closeMenu");
+    if (closeMenu) {
+        closeMenu.addEventListener("click", () => {
+            menuOverlay.style.display = "none";
+            document.body.style.overflow = "auto";
+        });
+    }
+
+    // ⚡ Cerrar el menú al hacer clic fuera del contenido
+    menuOverlay.addEventListener("click", e => {
+        if (e.target === menuOverlay) {
+            menuOverlay.style.display = "none";
+            document.body.style.overflow = "auto";
+        }
+    });
+
+    // ⚡ Ajustar el menú según el tamaño de la ventana
+    function actualizarMenu() {
+        menuHeader.innerHTML = ""; // Limpiamos antes de agregar
+        if (window.innerWidth > 700) {
+            menuHeader.appendChild(crearMenuEscritorio(opcionesMenu));
+        } else {
+            menuHeader.appendChild(crearContenedor());
+        }
+    }
+
+    // Inicializamos y escuchamos cambios de tamaño
+    actualizarMenu();
+    window.addEventListener("resize", actualizarMenu);
+});
+*/
+
+document.addEventListener("DOMContentLoaded", actualizarMenu);
+window.addEventListener("resize", actualizarMenu);
