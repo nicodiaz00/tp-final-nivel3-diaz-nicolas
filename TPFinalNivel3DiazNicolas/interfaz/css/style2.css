@@ -1089,7 +1089,7 @@ header {
 
     header {
         width: 100%;
-        height:5%;
+        height:60px;
         display: flex;
     }
 
@@ -1223,6 +1223,42 @@ header {
         
     }
 
+    .columnacard{
+        width:100%;
+        display:flex;
+        flex-direction:row;
+        flex-wrap:wrap;
+        background-color:hotpink;
+        justify-content:space-around;
+    }
+    /*estilos tarjetas articulos*/
+    .card{
+        width:150px;
+        height:40vh;
+        
+    }
+    .contenedor-img{
+        display:flex;
+        height:100px;
+    }
+    .img-articulo{
+        
+        
+        
+    }
+    .card-body{
+        display:flex;
+        
+        height:10px;
+    }
+    .card-title{
+        background-color:yellow;
+    }
+    .btnIdArticulo{
+        height:40px;
+        width:100%
+    }
+    
 }
 
     
