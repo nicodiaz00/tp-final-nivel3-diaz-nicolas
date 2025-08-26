@@ -11,10 +11,20 @@ namespace interfaz
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["error"] != null)
+            if (!IsPostBack)
             {
-                lblError.Text = Session["error"].ToString();
+                string mensaje = Request.QueryString["mensaje"];
+
+                if(mensaje == "-1")
+                {
+                    lblError.Text = "Debes iniciar Sesion para agregar articulos a tus favoritos.";
+                }
+                if (Session["error"] != null)
+                {
+                    lblError.Text = Session["error"].ToString();
+                }
             }
+            
         }
     }
 }

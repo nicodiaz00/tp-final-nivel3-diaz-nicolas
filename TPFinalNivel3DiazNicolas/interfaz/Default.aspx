@@ -2,11 +2,10 @@
 
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    
+
     <div id="row-art">
         <div class="carrusel-container">
-            
-            </div>
+        </div>
 
 
     </div>
@@ -22,7 +21,11 @@
                         <h5 class="card-title"><%#Eval("Nombre")%></h5>
                         <p class="card-text"><%#Eval("Descripcion")%></p>
 
+
+                    </div>
+                    <div class="btn-card">
                         <asp:Button runat="server" ID="btnIdArticulo" Text="Seleccionar" CssClass="btnIdArticulo" CommandArgument='<%#Eval("Id")%>' CommandName="IdArticulo" OnClick="btnIdArticulo_Click" />
+                        <asp:Button runat="server" ID="btnFavorito" Text="Detalle" CssClass="btn-favorito" CommandArgument='<%#Eval("Id")%>' CommandName="IdArticulo" OnClick="btnFavorito_Click"  />
                     </div>
                 </div>
             </ItemTemplate>

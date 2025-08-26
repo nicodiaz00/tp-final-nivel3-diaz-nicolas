@@ -34,7 +34,23 @@ namespace interfaz
 
         protected void btnIdArticulo_Click(object sender, EventArgs e)
         {
+            if(Session["usuario"]!= null)
+            {
+                string idArticulo = ((Button)sender).CommandArgument;
+            }
+            else
+            {
+                string mensaje = "-1";
+                Response.Redirect("Error.aspx?mensaje=" + mensaje);
+            }
+            
+        }
+
+        protected void btnFavorito_Click(object sender, EventArgs e)
+        {
             string idArticulo = ((Button)sender).CommandArgument;
+
+            Response.Redirect("Detalle.aspx?idArticulo=" + idArticulo);
         }
     }
 }
