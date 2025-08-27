@@ -33,6 +33,7 @@ namespace interfaz
                     usuarioTxt.Enabled = false;
                     apellidoTxt.Enabled= false;
                     emailTxt.Enabled= false;
+                    perfilTxt.Enabled= false;
 
                 }
             }
@@ -50,7 +51,18 @@ namespace interfaz
 
         protected void btnEditarPerfil_Click(object sender, EventArgs e)
         {
-           
+            btnGestion.Enabled = false;
+            btnEditarPerfil.Enabled = false;
+            btnGuardarPerfil.Enabled = true;
+            btnEditarPerfil.CssClass = "btn-panel-guardar";
+            btnGestion.CssClass = "btn-panel-guardar";
+            btnGuardarPerfil.CssClass = "button-panel-usuario";
+            usuarioTxt.Enabled = true;
+            apellidoTxt.Enabled = true;
+            emailTxt.Enabled = true;
+            perfilTxt.Enabled = true;
+
+
         }
 
         protected void btnIniciarS_Click(object sender, EventArgs e)

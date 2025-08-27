@@ -245,7 +245,7 @@ header {
 .imagenPerfil {
     width: 100px;
     height: 100px;
-    background-color: antiquewhite;
+    
 }
 
 .panelUsuario {
@@ -265,13 +265,13 @@ header {
 .imagenPerfil {
     width: 30%;
     height: auto;
-    background-color: ghostwhite;
+    
 }
 
 .panel-perfil {
     height: 60%;
     width: 70%;
-    background-color: palevioletred;
+    
     border-radius: 20px;
     display: flex;
     flex-direction: row;
@@ -283,7 +283,7 @@ header {
 }
 
 .asp-form {
-    width: 60%;
+    width: 80%;
     margin-left: 1.5%;
     border: 1px solid transparent;
     border-radius: 10px;
@@ -1367,10 +1367,134 @@ header {
         
         height: 40%;
     }
+
+    /*Pagina login*/
+
+    .contenedor-main-usuario{
+        width:100%;
+    }
+    .contendor-login{
+        width:90%;
+        height:80%;
+        
+        flex-direction:column;
+        justify-content:initial;
+    }
+    .titulo-login{
+        background-color:white;
+        margin-top:5%;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+    }
+    .contendor-btn{
+        display:flex;
+        flex-direction:row;
+        justify-content:space-around;
+        
+        height:10%;
+        width:100%;
+        margin-left:0%;
+        margin-top:10%;
+    }
+    .btn-login{
+        width:30%;
+    }
+    .panel-perfil {
+        background-color: white;
+        width: 95%;
+        height: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: initial;
+        box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+    }
+    .imagenPerfil{
+        
+    }
+    .contenedor-perfil-user{
+       
+       width:60%;
+
+    }
+    .titulo-panel-usuario {
+        width: 100%;
+        display: flex;
+        margin-top: 2%;
+    }
+    .titulo-panel-usuario > h3{
+        margin-left:4%;
+    }
+    .div-panel-usuario{
+        
+        flex-direction:column;
+        display:flex;
+        width:100%;
+    }
+    .contenedor-panel{
+        width:100%;
+        display:flex;
+        flex-direction:row;
+    }
     
+    .form-label{
+        font-size:1em;
+        margin-left:2%;
+        width:100%;
+    }
+
+    .imagenPerfil {
+        width: 40%;
+        
+        align-items: center;
+        justify-content: center;
+        display: flex;
+    }
+    .img-usuario{
+        border-radius:10px;
+        width:90%;
+        box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+    }
+    .prueba {
+        width: 100%;
+        
+        display: flex;
+        justify-content: space-around;
+        height: 12%;
+        align-items: center;
+        flex-direction:row;
+    }
+   
+    .button-panel-usuario {
+        display: inline-block;
+        background-color: lightgray; /* Color azul tipo botón */
+        padding: 5px 10px;
+        text-decoration: none;
+        border-radius: 20px;
+        transition: background-color 0.3s ease;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* sombra */
+        border: none;
+    }
+        .button-panel-usuario:hover {
+            background-color: rgba(0, 123, 255, 0.4); /* Color al pasar el mouse */
+            color: white;
+        }
+
+    .btn-panel-guardar {
+        display: inline-block;
+        background-color: lightgray; /* Color azul tipo botón */
+        padding: 5px 10px;
+        text-decoration: none;
+        border-radius: 20px;
+        transition: background-color 0.3s ease;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* sombra */
+        border: none;
+    }
 }
 
-    
+
+
+
 
 
 
