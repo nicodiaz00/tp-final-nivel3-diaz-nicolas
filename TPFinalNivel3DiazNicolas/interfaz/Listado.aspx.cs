@@ -22,9 +22,10 @@ namespace interfaz
                 ddlCampo.Enabled = false;
                 ddlCriterio.Enabled = false;
                 txtFiltro.Enabled = false;
-                btnBuscar.Enabled = false;
-                btnBuscar.CssClass = "btn-busqueda-desactivada";
+                /*btnBuscar.Enabled = false;
+                btnBuscar.CssClass = "btn-busqueda-desactivada";*/
             }
+           
 
         }
 
@@ -54,9 +55,10 @@ namespace interfaz
                 ddlCriterio.Enabled = false;
                 txtFiltro.Enabled = false;
                 btnBuscar.Enabled = false;
-                btnBuscar.CssClass = "btn-busqueda-desactivada";
-                
-                
+                txtBusqueda.Enabled = !FiltroAvanzado;
+
+
+
             }/*
             FiltroAvanzado = checkBoxBusquedaAvanzada.Checked;
             txtBusqueda.Enabled = !FiltroAvanzado;
@@ -83,18 +85,32 @@ namespace interfaz
 
         protected void btnBuscar_Click(object sender, EventArgs e)
         {
-            ArticuloNegocio articuloNegocio = new ArticuloNegocio();
+            
 
-            try
+            if (!checkBoxBusquedaAvanzada.Checked)
             {
-                dgvArticulos.DataSource = articuloNegocio.filtrarArticulo(ddlCampo.SelectedItem.ToString(), ddlCriterio.SelectedItem.ToString(), txtFiltro.Text);
+                List<Articulo> lista = (List<Articulo>)Session["listadoArticulo"];
+                List<Articulo> listaFiltrada = lista.FindAll(x => x.Nombre.ToUpper().Contains(txtBusqueda.Text.ToUpper()));
+                dgvArticulos.DataSource = listaFiltrada;
                 dgvArticulos.DataBind();
+
+                
             }
-            catch (Exception ex)
+            else
             {
-                Session.Add("error", ex);
-                throw;
+                ArticuloNegocio articuloNegocio = new ArticuloNegocio();
+                try
+                {
+                    dgvArticulos.DataSource = articuloNegocio.filtrarArticulo(ddlCampo.SelectedItem.ToString(), ddlCriterio.SelectedItem.ToString(), txtFiltro.Text);
+                    dgvArticulos.DataBind();
+                }
+                catch (Exception ex)
+                {
+                    Session.Add("error", ex);
+                    throw;
+                }
             }
+            
             
         }
 
