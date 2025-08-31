@@ -1710,8 +1710,10 @@ header {
     }
     .asp-imagen-editar-articulo {
         width: 90%;
+        min-height:50%;
         border-radius: 10px;
         box-shadow: 3px 1px 3px rgba(0, 0, 0, 0.2);
+        
     }
     .label-formulario {
         font-size: 0.7em;
@@ -1745,7 +1747,7 @@ header {
             background-color: rgba(0, 123, 255, 0.4);
         }
     }
-}
+
 
 
 

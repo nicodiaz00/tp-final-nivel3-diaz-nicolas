@@ -10,10 +10,8 @@ namespace negocio
 {
     public class ArticuloNegocio
     {
-
         public List<Articulo> listarArticulo()
         {
-
             List<Articulo> listaArticulo = new List<Articulo>();
             AccesoDatos accesodatos = new AccesoDatos();
             try
@@ -39,8 +37,6 @@ namespace negocio
                     articulo.Categoria.DescripcionCategoria = (string)accesodatos.Lector["Categoria"];
 
                     listaArticulo.Add(articulo);
-
-
                 }
                 return listaArticulo;
             }
@@ -53,7 +49,6 @@ namespace negocio
             {
                 accesodatos.cerrarConexion();
             }
-
         }
         public List<Articulo> filtrarArticulo(string campo, string criterio, string filtro)
         {
@@ -76,14 +71,11 @@ namespace negocio
                             consulta += "A.Codigo like '%" + filtro + "%'";
                             break;
                     }
-
-
                 }
                 else if (campo == "Nombre")
                 {
                     switch (criterio)
                     {
-
                         case "Empieza":
                             consulta += "A.Nombre like'" + filtro + "%'";
                             break;
@@ -134,15 +126,12 @@ namespace negocio
                     articuloAuxiliar.Categoria.Id = (int)accesoDatos.Lector["IdCategoria"];
                     articuloAuxiliar.Categoria.DescripcionCategoria = (string)accesoDatos.Lector["Categoria"];
 
-
                     listaArticulos.Add(articuloAuxiliar);
                 }
-
                 return listaArticulos;
             }
             catch (Exception)
             {
-
                 throw;
             }
         }
@@ -160,8 +149,6 @@ namespace negocio
                 while (accesoDatos.Lector.Read())
                 {
                     articulo = new Articulo();
-
-
 
                     articulo.Id = (int)accesoDatos.Lector["Id"];
                     articulo.Codigo = (string)accesoDatos.Lector["Codigo"];
@@ -182,18 +169,14 @@ namespace negocio
                     articulo.Categoria.Id = (int)accesoDatos.Lector["IdCategoria"];
                     articulo.Categoria.DescripcionCategoria = (string)accesoDatos.Lector["Categoria"];
 
-
                 }
-
                 return articulo;
             }
 
             catch (Exception)
             {
                 throw;
-
             }
-
         }
         public void crearArticulo(string codigo, string nombre, string descripcion, int idMarca, int idCategoria, string imgUrl, decimal precio)
         {
@@ -208,7 +191,33 @@ namespace negocio
                 accesoDatos.setearParametro("@IdCategoria", idCategoria);
                 accesoDatos.setearParametro("@ImagenUrl", imgUrl);
                 accesoDatos.setearParametro("@Precio", precio);
+                accesoDatos.ejecutarAccion();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                accesoDatos.cerrarConexion();
+            }
 
+        }
+        public void editarArticulo(Articulo articuloModificado)
+        {
+            AccesoDatos accesoDatos = new AccesoDatos();
+
+            try
+            {
+                accesoDatos.setearConsulta("update ARTICULOS set Codigo =@codigo, Nombre=@nombre, Descripcion=@descripcion, IdMarca=@idMarca, IdCategoria=@idCategoria, ImagenUrl =@imagenUrl, Precio=@precio where Id=@id");
+                accesoDatos.setearParametro("@codigo", articuloModificado.Codigo);
+                accesoDatos.setearParametro("@", articuloModificado.Nombre);
+                accesoDatos.setearParametro("@", articuloModificado.Descripcion);
+                accesoDatos.setearParametro("@", articuloModificado.Marca.Id);
+                accesoDatos.setearParametro("@", articuloModificado.Categoria.Id);
+                accesoDatos.setearParametro("@", articuloModificado.ImagenUrl);
+                accesoDatos.setearParametro("@", articuloModificado.Precio);
+                accesoDatos.setearParametro("@id", articuloModificado.Id);
 
                 accesoDatos.ejecutarAccion();
             }
@@ -221,9 +230,8 @@ namespace negocio
             {
                 accesoDatos.cerrarConexion();
             }
-
-
-
+            
         }
+
     }
 }

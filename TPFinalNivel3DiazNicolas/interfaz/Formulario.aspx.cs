@@ -45,14 +45,7 @@ namespace interfaz
                 {
 
                     throw;
-                }
-                
-
-
-
-
-
-
+                }               
             }
         }
 
@@ -68,8 +61,6 @@ namespace interfaz
 
                 articuloNegocio.crearArticulo(txtCodigo.Text, txtNombre.Text, txtDescripcion.Text, idMarca, idCategoria, txtImagen.Text, precio);
 
-
-
                 lblMensaje.Text = "¡El artículo se cargó correctamente!";
                 pnlMensaje.Visible = true;
 
@@ -84,20 +75,13 @@ namespace interfaz
                 txtImagen.Enabled = false;
                 ddlMarca.Enabled = false;
                 ddlCategoria.Enabled = false;
-
-
-
             }
             catch (Exception ex)
             {
-
                 lblMensaje.Text = "Error: " + ex.Message;
                 pnlMensaje.Visible = true;
-            }
-           
-           
+            }                  
         }
-
         protected void btnCancelarArticulo_Click(object sender, EventArgs e)
         {
             txtNombre.Text = "";
@@ -108,12 +92,10 @@ namespace interfaz
             ddlMarca.SelectedIndex = 0;
             ddlCategoria.SelectedIndex = 0;
         }
-
         protected void txtImagen_TextChanged(object sender, EventArgs e)
         {
             Image1.ImageUrl = txtImagen.Text.Trim();
         }
-
         protected void btnAceptarMensaje_Click(object sender, EventArgs e)
         {
             pnlMensaje.Visible = false;
