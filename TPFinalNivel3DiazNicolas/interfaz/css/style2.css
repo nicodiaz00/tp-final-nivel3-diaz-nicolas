@@ -242,11 +242,7 @@ header {
     background-color: palevioletred;
 }
 
-.imagenPerfil {
-    width: 100px;
-    height: 100px;
-    
-}
+
 
 .panelUsuario {
     background-color: grey;
@@ -717,8 +713,8 @@ header {
 
 .contenedor-titulo-editar {
     width: 100%;
-    background-color: blanchedalmond;
-    height: 9%;
+    
+    height: 10%;
     align-items: center;
     display: flex
 }
@@ -728,22 +724,18 @@ header {
     }
 
 .contenedor-formulario-editar {
-    width: 100%;
-    height: 70vh;
+    width: 90%;
+    
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    
+    border-radius: 10px;
 }
 
 .formulario {
-    background-color: aliceblue;
-    height: 80%;
-    width: 45%;
-    margin-right: 0.5%;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+    
+    height: 90%;
+    width: 99%;  
     display: flex;
     flex-direction: column;
 }
@@ -774,13 +766,12 @@ header {
 }
 
 .contendor-imagen {
-    background-color: yellow;
+    
     height: 80%;
     width: 45%;
     margin-left: 0.5%;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+    
+    
 }
 
 /*PAGINA MENUUSUARIO*/
@@ -1674,36 +1665,85 @@ header {
     }
 
     /*Pantalla editar articulo*/
-
-    .contenedor-formulario-editar{
-        width:100%;
-        height:100%;
-        background-color:greenyellow;
+    .contendor-editar{
+       
         display:flex;
         flex-direction:column;
-        justify-content:initial;
+        width:100%;
+        align-items:center;
+        
+        
+        
+    }
+    .contenedor-formulario-editar {
+        width: 99%;
+        background-color:white;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: row;
+        
+        height: 80%;
     }
     .contenedor-titulo-editar{
         height:10%;
+        
     }
     .contenedor-titulo-editar > h2{
         margin-left:2%;
     }
     .formulario {
-        width: 99%;
-        height: 80%;
-        min-height: 70%; /* Mantiene al menos esta altura */
-        margin-top: 1%;
+        width: 59%;
+        height: 90%;
+        margin-top:1%;
+        
+        
         overflow: auto; /* Aparece scroll cuando es necesario */
     }
     .contendor-imagen {
         display: flex;
-        width: 99%;
-        height: 10%;
+        width: 39%;
+        height: 75%;
         margin-top: 1%;
+        
+        justify-content:center;
+        align-items:center;
     }
-    .label-formulario{
-        font-size:0.7em;
+    .asp-imagen-editar-articulo {
+        width: 90%;
+        border-radius: 10px;
+        box-shadow: 3px 1px 3px rgba(0, 0, 0, 0.2);
+    }
+    .label-formulario {
+        font-size: 0.7em;
+    }
+    .ddl{
+        width:50%;
+    }
+    .contenedor-botones{
+        display:flex;
+        flex-direction:row;
+       
+        justify-content:space-between;
+        padding:1%;
+        width:100%;
+    }
+    .btn-panel-edicion {
+        
+        display: flex;
+        width: 100px;
+        font-size: 0.9em;
+        border: none;
+        border-radius: 10px;
+        background-color: lightgray;
+        text-align: center;
+        transition: background-color 0.3s ease;
+        box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+        
+    }
+
+        .btn-panel-edicion:hover {
+            background-color: rgba(0, 123, 255, 0.4);
+        }
     }
 }
 

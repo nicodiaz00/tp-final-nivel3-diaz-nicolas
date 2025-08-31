@@ -31,8 +31,14 @@
 
             </div>
             <div class="contendor-imagen">
+                <asp:Image runat="server" ID="aspImageEditarArticulo" CssClass="asp-imagen-editar-articulo" ImageUrl="https://img.freepik.com/free-vector/illustration-gallery-icon_53876-27002.jpg"/>
 
             </div>
+        </div>
+        <div class="contenedor-botones">
+            <asp:Button runat="server" Text="Guardar" ID="btnGuardarEdicion" CssClass="btn-panel-edicion" OnClick="btnGuardarEdicion_Click"  />
+            <asp:Button runat="server" Text="Eliminar" ID="btnEliminarArticulo" CssClass="btn-panel-edicion" OnClick="btnEliminarArticulo_Click"/>
+            <asp:Button runat="server" Text="Cancelar" ID="btnCancelarEdicion" CssClass="btn-panel-edicion" OnClick="btnCancelarEdicion_Click"/>
         </div>
     </div>
 </asp:Content>

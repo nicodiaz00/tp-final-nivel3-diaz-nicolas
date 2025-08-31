@@ -20,5 +20,20 @@ namespace interfaz
 
 
         }
+
+        protected void btnGuardarEdicion_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void btnEliminarArticulo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void btnCancelarEdicion_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
