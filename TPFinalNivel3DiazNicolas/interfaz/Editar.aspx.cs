@@ -13,12 +13,13 @@ namespace interfaz
     {
         private List<Marca> listadoMarca { get; set; }
         private List<Categoria> listadoCategoria { get; set; }
+        private Articulo articulo { get; set; }
         protected void Page_Load(object sender, EventArgs e)
         {
             try
             {
                if(!IsPostBack) {
-                    Articulo articulo = (Articulo)Session["articuloEditar"];
+                    articulo = (Articulo)Session["articuloEditar"];
                     MarcaNegocio marcaNegocio = new MarcaNegocio();
                     CategoriaNegocio categoriaNegocio = new CategoriaNegocio();
                     
@@ -62,12 +63,43 @@ namespace interfaz
 
         protected void btnGuardarEdicion_Click(object sender, EventArgs e)
         {
+            
+            int marca = Convert.ToInt32(ddlMarca.SelectedValue);
+            int categoria = Convert.ToInt32(ddlCategoria.SelectedValue);
+            decimal precio = Convert.ToDecimal(txtPrecio.Text.Trim());
+            articulo = (Articulo)Session["articuloEditar"];
+
+            try
+            {
+                ArticuloNegocio articuloNegocio = new ArticuloNegocio();
+                articuloNegocio.editarArticulo(txtCodigo.Text,txtNombre.Text,txtDescripcion.Text,marca,categoria,txtUrlImagen.Text,precio,articulo.Id);
+
+                Response.Redirect("default.aspx", false);
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
 
         }
 
         protected void btnEliminarArticulo_Click(object sender, EventArgs e)
         {
+            try
+            {
+                articulo = (Articulo)Session["articuloEditar"];
+                ArticuloNegocio articuloNegocio = new ArticuloNegocio();
+                articuloNegocio.eliminarArticulo(articulo.Id);
+                Response.Redirect("default.aspx", false);
 
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
 
         protected void btnCancelarEdicion_Click(object sender, EventArgs e)

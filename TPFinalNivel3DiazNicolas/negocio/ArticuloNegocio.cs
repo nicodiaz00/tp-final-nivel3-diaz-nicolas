@@ -197,21 +197,21 @@ namespace negocio
                 accesoDatos.cerrarConexion();
             }
         }
-        public void editarArticulo(Articulo articuloModificado)
+        public void editarArticulo(string codigo, string nombre, string descripcion, int idMarca, int idCategoria, string imgUrl, decimal precio, int idArticulo)
         {
             AccesoDatos accesoDatos = new AccesoDatos();
 
             try
             {
                 accesoDatos.setearConsulta("update ARTICULOS set Codigo =@codigo, Nombre=@nombre, Descripcion=@descripcion, IdMarca=@idMarca, IdCategoria=@idCategoria, ImagenUrl =@imagenUrl, Precio=@precio where Id=@id");
-                accesoDatos.setearParametro("@codigo", articuloModificado.Codigo);
-                accesoDatos.setearParametro("@", articuloModificado.Nombre);
-                accesoDatos.setearParametro("@", articuloModificado.Descripcion);
-                accesoDatos.setearParametro("@", articuloModificado.Marca.Id);
-                accesoDatos.setearParametro("@", articuloModificado.Categoria.Id);
-                accesoDatos.setearParametro("@", articuloModificado.ImagenUrl);
-                accesoDatos.setearParametro("@", articuloModificado.Precio);
-                accesoDatos.setearParametro("@id", articuloModificado.Id);
+                accesoDatos.setearParametro("@codigo", codigo);
+                accesoDatos.setearParametro("@nombre",nombre );
+                accesoDatos.setearParametro("@descripcion", descripcion);
+                accesoDatos.setearParametro("@idMarca", idMarca);
+                accesoDatos.setearParametro("@idCategoria", idCategoria);
+                accesoDatos.setearParametro("@imagenUrl", imgUrl);
+                accesoDatos.setearParametro("@precio", precio);
+                accesoDatos.setearParametro("@id", idArticulo);
 
                 accesoDatos.ejecutarAccion();
             }
