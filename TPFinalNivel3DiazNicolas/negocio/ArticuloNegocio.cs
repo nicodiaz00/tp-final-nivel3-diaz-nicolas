@@ -42,7 +42,6 @@ namespace negocio
             }
             catch (Exception)
             {
-
                 throw;
             }
             finally
@@ -138,14 +137,12 @@ namespace negocio
         public Articulo seleccionarArticulo(string id)
         {
             Articulo articulo = null;
-
             AccesoDatos accesoDatos = new AccesoDatos();
             try
             {
                 accesoDatos.setearConsulta("Select A.Id, A.Codigo, A.Nombre, A.Descripcion, A.ImagenUrl, A.Precio, M.Descripcion as Marca, C.Descripcion as Categoria, A.IdMarca, A.IdCategoria from ARTICULOS A, MARCAS M, CATEGORIAS C where A.IdMarca = M.Id and A.IdCategoria = C.Id and A.Id= @id");
                 accesoDatos.setearParametro("@id", id);
                 accesoDatos.ejecutarLectura();
-
                 while (accesoDatos.Lector.Read())
                 {
                     articulo = new Articulo();
@@ -168,11 +165,9 @@ namespace negocio
                     articulo.Categoria = new Categoria();
                     articulo.Categoria.Id = (int)accesoDatos.Lector["IdCategoria"];
                     articulo.Categoria.DescripcionCategoria = (string)accesoDatos.Lector["Categoria"];
-
                 }
                 return articulo;
             }
-
             catch (Exception)
             {
                 throw;
@@ -201,7 +196,6 @@ namespace negocio
             {
                 accesoDatos.cerrarConexion();
             }
-
         }
         public void editarArticulo(Articulo articuloModificado)
         {
@@ -223,15 +217,30 @@ namespace negocio
             }
             catch (Exception)
             {
-
+                throw;
+            }
+            finally
+            {
+                accesoDatos.cerrarConexion();
+            }         
+        }
+        public void eliminarArticulo(int id)
+        {
+            AccesoDatos accesoDatos = new AccesoDatos();
+            try
+            {                
+                accesoDatos.setearConsulta("delete from ARTICULOS where Id= @id");
+                accesoDatos.setearParametro("@id", id);
+                accesoDatos.ejecutarAccion();
+            }
+            catch (Exception)
+            {
                 throw;
             }
             finally
             {
                 accesoDatos.cerrarConexion();
             }
-            
         }
-
     }
 }
