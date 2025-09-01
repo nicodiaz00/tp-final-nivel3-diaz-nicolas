@@ -1666,30 +1666,24 @@ header {
         padding: 0px; /* Quita espacio extra dentro de la celda */
         margin: 0px;
     }
-
     /*Pantalla editar articulo*/
     .contendor-editar{
        
         display:flex;
         flex-direction:column;
         width:100%;
-        align-items:center;
-        
-        
-        
+        align-items:center;   
     }
     .contenedor-formulario-editar {
         width: 99%;
         background-color:white;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         display: flex;
-        flex-direction: row;
-        
+        flex-direction: row;   
         height: 80%;
     }
     .contenedor-titulo-editar{
-        height:10%;
-        
+        height:10%;       
     }
     .contenedor-titulo-editar > h2{
         margin-left:2%;
@@ -1697,19 +1691,14 @@ header {
     .formulario {
         width: 59%;
         height: 90%;
-        margin-top:1%;
-        
-        
+        margin-top:1%;       
         overflow: auto; /* Aparece scroll cuando es necesario */
     }
     .contendor-imagen {
         display: flex;
         width: 39%;
         height: 75%;
-        margin-top: 1%;
-        
-        
-        
+        margin-top: 1%;      
     }
     .asp-imagen-editar-articulo {
         width: 95%;
@@ -1726,8 +1715,7 @@ header {
     }
     .contenedor-botones{
         display:flex;
-        flex-direction:row;
-       
+        flex-direction:row;      
         justify-content:space-between;
         padding:1%;
         width:100%;
@@ -1742,13 +1730,42 @@ header {
         background-color: lightgray;
         text-align: center;
         transition: background-color 0.3s ease;
-        box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
-        
+        box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);   
     }
-
         .btn-panel-edicion:hover {
             background-color: rgba(0, 123, 255, 0.4);
         }
+
+        /*pantalla formulario*/
+    .div-formulario-main {
+        height: 100%;;
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        background-color:rebeccapurple; 
+        align-items:center;
+    }
+    .contedor-cargar-articulo{
+        width:100%;
+        background-color:yellow;
+    }
+    .contenedor-form-and-image{
+        background-color:blue;
+        width:95%;
+    }
+    .formulario-articulos{
+        width:70%
+    }
+    .div-imagen-articulo{
+        width:30%;
+        background-color:orangered;
+    }
+    .div-form-btn{
+        background-color:darkslategrey;
+        justify-content:space-around;
+        align-items:center;
+    }
+
     }
 
 

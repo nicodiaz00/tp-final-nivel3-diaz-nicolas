@@ -119,6 +119,8 @@ namespace interfaz
             txtImagen.Text = "";
             ddlMarca.SelectedIndex = 0;
             ddlCategoria.SelectedIndex = 0;
+
+            Response.Redirect("Default.aspx", false);
         }
     }
 }

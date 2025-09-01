@@ -11,8 +11,14 @@
              </div>
 
              <div class="card-body">
-                 <h5 class="card-title"><%#Eval("Nombre")%></h5>
-                 <p class="card-text"><%#Eval("Descripcion")%></p>
+                 <h5 class="card-title">Nombre: <%#Eval("Nombre")%></h5>
+                 <p class="card-text">Descripcion: <%#Eval("Descripcion")%></p>                
+                 <p class="card-text">Marca: <%#Eval("Marca")%></p>
+                 <p class="card-text">Categoria: <%#Eval("Categoria")%></p>
+                 <p class="card-text">Precio: <%#Eval("Precio")%></p>
+
+
+
 
 
              </div>

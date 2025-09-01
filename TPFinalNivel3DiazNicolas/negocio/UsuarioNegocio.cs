@@ -20,7 +20,6 @@ namespace negocio
                 datos.setearParametro("@email", email );
                 datos.setearParametro("@pass", pass);
 
-
                 datos.ejecutarLectura();
                 while (datos.Lector.Read())
                 {
@@ -53,30 +52,23 @@ namespace negocio
                     else
                     {
                         usuario.UrlImagen = (string)datos.Lector["urlImagenPerfil"];
-                    }
-
-                    
-                     ;
+                    }                
                     int userValue = Convert.ToInt32(datos.Lector["admin"]);
                     usuario.TipoUsuario = (TipoUsuario)userValue;
-                    
-                     
+                                 
                     return usuario;
                 }
                 return null;
             }
             catch (Exception ex)
             {
-
                 throw ex;
             }
             finally
             {
                 datos.cerrarConexion();
             }
-
         }
-
         public void registrarUsuario(Usuario usuarioNuevo)
         {
             AccesoDatos accesoDatos = new AccesoDatos();
@@ -95,7 +87,6 @@ namespace negocio
             }
             catch (Exception)
             {
-
                 throw;
             }
             finally
@@ -103,7 +94,6 @@ namespace negocio
                 accesoDatos.cerrarConexion();
             }
         }
-
         public bool usuarioRegistrado(string email)
         {
             AccesoDatos accesoDatos = new AccesoDatos();
@@ -120,14 +110,10 @@ namespace negocio
                 else
                 {
                     return false;
-                }
-
-                
-
+                }            
             }
             catch (Exception)
             {
-
                 throw;
             }
             finally
