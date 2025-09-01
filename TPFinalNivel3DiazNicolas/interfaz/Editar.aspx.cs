@@ -74,5 +74,10 @@ namespace interfaz
         {
 
         }
+
+        protected void txtUrlImagen_TextChanged(object sender, EventArgs e)
+        {
+            aspImageEditarArticulo.ImageUrl = txtUrlImagen.Text.Trim();
+        }
     }
 }

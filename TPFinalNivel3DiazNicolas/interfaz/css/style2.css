@@ -769,7 +769,10 @@ header {
     
     height: 80%;
     width: 45%;
-    margin-left: 0.5%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    
     
     
 }
@@ -1705,11 +1708,11 @@ header {
         height: 75%;
         margin-top: 1%;
         
-        justify-content:center;
-        align-items:center;
+        
+        
     }
     .asp-imagen-editar-articulo {
-        width: 90%;
+        width: 95%;
         min-height:50%;
         border-radius: 10px;
         box-shadow: 3px 1px 3px rgba(0, 0, 0, 0.2);
