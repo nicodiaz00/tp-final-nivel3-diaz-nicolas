@@ -24,11 +24,8 @@ namespace interfaz
                 txtFiltro.Enabled = false;
                 /*btnBuscar.Enabled = false;
                 btnBuscar.CssClass = "btn-busqueda-desactivada";*/
-            }
-           
-
+            }         
         }
-
         protected void txtBusqueda_TextChanged(object sender, EventArgs e)
         {
             List<Articulo> lista = (List<Articulo>)Session["listadoArticulo"];
@@ -59,31 +56,36 @@ namespace interfaz
                 btnBuscar.Enabled = false;
                 txtBusqueda.Enabled = !FiltroAvanzado;
                 txtFiltro.Text = "";
-            }/*
-            FiltroAvanzado = checkBoxBusquedaAvanzada.Checked;
-            txtBusqueda.Enabled = !FiltroAvanzado;
-            */           
+            }         
         }
         protected void ddlCampo_SelectedIndexChanged(object sender, EventArgs e)
         {
-            ddlCriterio.Items.Clear();   
-            if (ddlCampo.SelectedItem.ToString() == "Codigo" || ddlCampo.SelectedItem.ToString() == "Nombre")
+            ddlCriterio.Items.Clear();
+            txtBusqueda.Text = "";
+            txtFiltro.Text = "";
+            if (ddlCampo.SelectedItem.Text == "Codigo" || ddlCampo.SelectedItem.Text == "Nombre")
             {
+                txtFiltro.TextMode = System.Web.UI.WebControls.TextBoxMode.SingleLine;
+                regexValidator.ValidationExpression = ".*";
+                regexValidator.IsValid = true;
+
                 ddlCriterio.Items.Add("Empieza");
                 ddlCriterio.Items.Add("Contiene");
                 ddlCriterio.Items.Add("Termina");
             }
             else
             {
+                txtFiltro.TextMode = System.Web.UI.WebControls.TextBoxMode.Number;
+                regexValidator.ValidationExpression = "^[0-9]+(\\.[0-9]+)?$";
+                regexValidator.ErrorMessage = "Solo se permiten números y puntos.";
+
                 ddlCriterio.Items.Add("Igual a");
                 ddlCriterio.Items.Add("Mayor a");
                 ddlCriterio.Items.Add("Menor a");
             }
         }
-
         protected void btnBuscar_Click(object sender, EventArgs e)
-        {
-            
+        {           
             if (!checkBoxBusquedaAvanzada.Checked)
             {
                 List<Articulo> lista = (List<Articulo>)Session["listadoArticulo"];
@@ -96,7 +98,7 @@ namespace interfaz
                 ArticuloNegocio articuloNegocio = new ArticuloNegocio();
                 try
                 {
-                    dgvArticulos.DataSource = articuloNegocio.filtrarArticulo(ddlCampo.SelectedItem.ToString(), ddlCriterio.SelectedItem.ToString(), txtFiltro.Text);
+                    dgvArticulos.DataSource = articuloNegocio.filtrarArticulo(ddlCampo.SelectedItem.ToString(), ddlCriterio.SelectedItem.ToString(), txtFiltro.Text.ToString());
                     dgvArticulos.DataBind();
                 }
                 catch (Exception ex)
@@ -107,11 +109,8 @@ namespace interfaz
             }     
         }
         protected void dgvArticulos_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            
-
+        {            
             ArticuloNegocio articuloNegocio = new ArticuloNegocio();
-
             try
             {
                 string idArticulo = dgvArticulos.SelectedDataKey.Value.ToString();
@@ -123,10 +122,8 @@ namespace interfaz
             }
             catch (Exception)
             {
-
                 throw;
-            }
-         
+            }        
         }
         protected void dgvArticulos_PageIndexChanging(object sender, GridViewPageEventArgs e)
         {

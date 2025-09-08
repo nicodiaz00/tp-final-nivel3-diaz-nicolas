@@ -64,6 +64,14 @@
                     <asp:UpdatePanel runat="server">
                         <ContentTemplate>
                             <asp:TextBox runat="server" ID="txtFiltro" CssClass="input-filtro"></asp:TextBox>
+                            
+                            <asp:RegularExpressionValidator ID="regexValidator" runat="server"
+                                ControlToValidate="txtFiltro"
+                                ErrorMessage="Solo se permiten números y puntos."
+                                ForeColor="Red"
+                                Display="Dynamic">
+
+                            </asp:RegularExpressionValidator>
                         </ContentTemplate>
                     </asp:UpdatePanel>
                 </div>

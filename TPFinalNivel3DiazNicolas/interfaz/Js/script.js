@@ -67,7 +67,6 @@ function createMenu(opciones) {
         menuItems.appendChild(li);
     });
 }
-
 function actualizarMenu() {
     const menuHeader = document.querySelector(".menu-mobile");
     menuHeader.innerHTML = "";
@@ -80,72 +79,40 @@ function actualizarMenu() {
     }
 
 }
-/*
-document.addEventListener("DOMContentLoaded", function () {
-    const menuItems = document.getElementById("menuItems");
-    const menuHeader = document.querySelector(".menu-mobile");
-    const burgerButton = document.querySelector(".btn-menu-burger");
-    const menuOverlay = document.getElementById("menuOverlay");
+function validarNumerosYPuntos(e) {
+    const key = e.key;
+    if (!(/[0-9]/.test(key) || key === '.')) {
+        e.preventDefault();
+    }
+    if (key === '.' && this.value.includes('.')) {
+        e.preventDefault();
+    }
+}
 
-    // ⚡ Generar menú dinámicamente desde opcionesMenu (pasado desde el code-behind)
-    if (typeof opcionesMenu !== "undefined" && Array.isArray(opcionesMenu)) {
-        opcionesMenu.forEach(opcion => {
-            const li = document.createElement("li");
-            const a = document.createElement("a");
-            a.href = opcion.direccion;
-            a.textContent = opcion.nombre;
-            li.appendChild(a);
-            menuItems.appendChild(li);
-        });
+function validarLetrasYNumeros(e) {
+    const key = e.key;
+    if (!(/[a-zA-Z0-9]/.test(key))) {
+        e.preventDefault();
+    }
+}
+
+const ddlCampo = document.getElementById('<%= ddlCampo.ClientID %>');
+const txtBusqueda = document.getElementById('<%= txtFiltro.ClientID %>');
+
+const aplicarValidacion = function () {
+    const valorSeleccionado = ddlCampo.options[ddlCampo.selectedIndex].text;
+    txtBusqueda.removeEventListener('keypress', validarNumerosYPuntos);
+    txtBusqueda.removeEventListener('keypress', validarLetrasYNumeros);
+
+    if (valorSeleccionado === 'Precio') {
+        txtBusqueda.addEventListener('keypress', validarNumerosYPuntos);
     } else {
-        console.error("No se encontraron opciones para el menú");
+        txtBusqueda.addEventListener('keypress', validarLetrasYNumeros);
     }
-
-    // ⚡ Evento para abrir el menú móvil
-    console.log(burgerButton)
-    if (burgerButton) {
-        burgerButton.addEventListener("click", () => {
-            console.log("hicisteclick");
-            createMenu(opcionesMenu);
-            menuOverlay.style.display = "block";
-            document.body.style.overflow = "hidden"; // Bloquear scroll
-        });
-    } else {
-        console.error("No se encontró el botón burger");
-    }
-
-    // ⚡ Evento para cerrar el menú al hacer click en la X
-    const closeMenu = document.getElementById("closeMenu");
-    if (closeMenu) {
-        closeMenu.addEventListener("click", () => {
-            menuOverlay.style.display = "none";
-            document.body.style.overflow = "auto";
-        });
-    }
-
-    // ⚡ Cerrar el menú al hacer clic fuera del contenido
-    menuOverlay.addEventListener("click", e => {
-        if (e.target === menuOverlay) {
-            menuOverlay.style.display = "none";
-            document.body.style.overflow = "auto";
-        }
-    });
-
-    // ⚡ Ajustar el menú según el tamaño de la ventana
-    function actualizarMenu() {
-        menuHeader.innerHTML = ""; // Limpiamos antes de agregar
-        if (window.innerWidth > 700) {
-            menuHeader.appendChild(crearMenuEscritorio(opcionesMenu));
-        } else {
-            menuHeader.appendChild(crearContenedor());
-        }
-    }
-
-    // Inicializamos y escuchamos cambios de tamaño
-    actualizarMenu();
-    window.addEventListener("resize", actualizarMenu);
-});
-*/
+};
 
 document.addEventListener("DOMContentLoaded", actualizarMenu);
 window.addEventListener("resize", actualizarMenu);
+/*
+window.onload = aplicarValidacion;
+ddlCampo.addEventListener('change', aplicarValidacion);*/
