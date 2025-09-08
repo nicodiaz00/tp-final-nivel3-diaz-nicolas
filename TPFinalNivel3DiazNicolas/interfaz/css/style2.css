@@ -301,10 +301,11 @@ header {
 
 /*  PAGINA LISTADO.ASPX*/
 .contenedor-listado-main {
-    height: 100vh;
+   
     width: 100%;
     display: flex;
     flex-direction: column;
+    
 }
 .titulo-listado{
     
@@ -333,10 +334,18 @@ header {
     }
 
 .contendor-busqueda-articulos {
-    height: 8vh;
+    height: 10%;
+    
     display: flex;
     flex-direction: row;
     width: 100%;
+}
+.contenedor-1, .contenedor-2 {
+    display: flex;
+    width: 50%;
+    flex-direction: row;
+    margin-top: 2%;
+    
 }
 
 .contenedor-txt-busqueda {
@@ -389,17 +398,19 @@ header {
     display: flex;
     flex-direction: row;
     width: 100%;
-    height: 12vh;
+    height: 30%;
+    
+    
 }
 
 .contenedor-campo {
-    width: 20%;
+    width: 25%;
     display: flex;
     align-items: center;
 }
 
     .contenedor-campo > label {
-        margin-left: 5%;
+        margin-left: 7%;
         font-size: 1.1em;
     }
 
@@ -419,7 +430,7 @@ header {
     }
 
 .contenedor-criterio {
-    width: 20%;
+    width: 25%;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -446,9 +457,11 @@ header {
     }
 
 .contenedor-filtro {
-    width: 20%;
+    width: 35%;
     display: flex;
     align-items: center;
+    margin-right:3%;
+    
 }
 
     .contenedor-filtro > label {
@@ -473,9 +486,10 @@ header {
     }
 
 .contenedorBtnBusqueda {
-    width: 20%;
+    width: 25%;
     display: flex;
     align-items: center;
+    
 }
 
 .btn-busqueda-desactivada {
@@ -630,16 +644,17 @@ header {
     width:100%;
     display:flex;
     flex-direction:row;
-    height:10%;
+    height:20%;
     align-items:center;
 
 }
 .btn-cargar-articulo {
+    height:70%;
     width: 25%;
     display: inline-block;
     background-color: lightgray; /* Color azul tipo botón */
     color: white;
-    padding: 10px 10px;
+    /*padding: 10px 10px;*/
     box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
     text-decoration: none;
     border-radius: 20px;
@@ -647,7 +662,6 @@ header {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* sombra */
     border: none;
     margin-left: 3%;
-    margin-top: 4%;
 }
     .btn-cargar-articulo:hover {
         background-color: rgba(0, 123, 255, 0.4); /* Color al pasar el mouse */
@@ -670,7 +684,7 @@ header {
     display: inline-block;
     background-color: lightgray; /* Color azul tipo botón */
     color: white;
-    padding: 10px 10px;
+    /*padding: 10px 10px;*/
     box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
     text-decoration: none;
     border-radius: 20px;
@@ -678,7 +692,6 @@ header {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* sombra */
     border: none;
     margin-left: 3%;
-    margin-top: 4%;
 }
     .btn-cancelar-articulo:hover {
         background-color: rgba(202, 7, 7, 0.95); /* Color al pasar el mouse */
@@ -704,16 +717,17 @@ header {
 }
 /*PANTALLA EDITAR ARTICULO*/
 .contendor-editar {
-    height: 100vh;
+    background-color:rebeccapurple;
     width: 100%;
     display: flex;
     flex-direction: column;
+    align-items:center;
     
 }
 
 .contenedor-titulo-editar {
     width: 100%;
-    
+    background-color:dimgrey;
     height: 10%;
     align-items: center;
     display: flex
@@ -724,12 +738,14 @@ header {
     }
 
 .contenedor-formulario-editar {
-    width: 90%;
-    
+    width: 70%;
+    height:70%;
+    background-color: yellow;
     display: flex;
     flex-direction: row;
-    
+    box-shadow: 3px 1px 3px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
+    margin-top:5%;
 }
 
 .formulario {
@@ -1575,6 +1591,7 @@ header {
         width: 100%;
         flex-direction: row;
         
+        
         margin-top:2%
     }
     .contenedor-filtro{
@@ -1738,32 +1755,46 @@ header {
 
         /*pantalla formulario*/
     .div-formulario-main {
-        height: 100%;;
+        height: 100%;
         display: flex;
         width: 100%;
         flex-direction: column;
-        background-color:rebeccapurple; 
+        
         align-items:center;
     }
     .contedor-cargar-articulo{
         width:100%;
-        background-color:yellow;
+        
+       
     }
     .contenedor-form-and-image{
-        background-color:blue;
+        
         width:95%;
+        
     }
     .formulario-articulos{
         width:70%
     }
     .div-imagen-articulo{
         width:30%;
-        background-color:orangered;
+        
     }
     .div-form-btn{
-        background-color:darkslategrey;
-        justify-content:space-around;
+        
+        justify-content:center;
         align-items:center;
+        display:flex;
+        width:100%;
+        height:40%;
+        flex-direction:row;
+    }
+    .btn-cargar-articulo, .btn-cancelar-articulo {
+        
+       
+        width: 40%;
+        display: flex;
+        text-align: center;
+        
     }
 
     }

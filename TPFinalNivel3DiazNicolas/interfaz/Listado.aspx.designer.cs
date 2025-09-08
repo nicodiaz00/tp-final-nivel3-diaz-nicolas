@@ -15,6 +15,15 @@ namespace interfaz
     {
 
         /// <summary>
+        /// Control updatepanel1.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.UpdatePanel updatepanel1;
+
+        /// <summary>
         /// Control txtBusqueda.
         /// </summary>
         /// <remarks>
@@ -67,6 +76,15 @@ namespace interfaz
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnBuscar;
+
+        /// <summary>
+        /// Control updatepanel2.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.UpdatePanel updatepanel2;
 
         /// <summary>
         /// Control dgvArticulos.

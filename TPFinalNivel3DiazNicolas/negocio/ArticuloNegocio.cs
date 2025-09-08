@@ -26,7 +26,10 @@ namespace negocio
                     articulo.Codigo = (string)accesodatos.Lector["Codigo"];
                     articulo.Nombre = (string)accesodatos.Lector["Nombre"];
                     articulo.Descripcion = (string)accesodatos.Lector["Descripcion"];
-                    articulo.Precio = Math.Round((decimal)accesodatos.Lector["Precio"], 2);
+                    decimal precio = (decimal)accesodatos.Lector["Precio"];
+                    decimal precioRedondeado = (Math.Round(precio, 2));
+
+                    articulo.Precio =precioRedondeado;
                     articulo.ImagenUrl = (string)accesodatos.Lector["ImagenUrl"];
                     articulo.Marca = new Marca();
                     articulo.Marca.Id = (int)accesodatos.Lector["IdMarca"];
@@ -91,13 +94,13 @@ namespace negocio
                     switch (criterio)
                     {
                         case "Mayor a":
-                            consulta += "A.Precio > " + filtro;
+                            consulta += "Round(A.Precio,2) > " + filtro;
                             break;
                         case "Menor a":
-                            consulta += "A.Precio < " + filtro;
+                            consulta += "Round(A.Precio,2) < " + filtro;
                             break;
                         case "Igual a":
-                            consulta += "A.Precio = " + filtro;
+                            consulta += "Round(A.Precio,2) = " + filtro;
                             break;
                     }
                 }
@@ -115,7 +118,7 @@ namespace negocio
                         articuloAuxiliar.ImagenUrl = (string)accesoDatos.Lector["ImagenUrl"];
                     }
                     decimal precio = (decimal)accesoDatos.Lector["Precio"];
-                    decimal precioRedondeado = (Math.Round(precio, 0));
+                    decimal precioRedondeado = (Math.Round(precio,2));
                     articuloAuxiliar.Precio = precioRedondeado;
                     articuloAuxiliar.Marca = new Marca();
                     articuloAuxiliar.Marca.Id = (int)accesoDatos.Lector["IdMarca"];
@@ -156,7 +159,7 @@ namespace negocio
                         articulo.ImagenUrl = (string)accesoDatos.Lector["ImagenUrl"];
                     }
                     decimal precio = (decimal)accesoDatos.Lector["Precio"];
-                    decimal precioRedondeado = (Math.Round(precio, 0));
+                    decimal precioRedondeado = (Math.Round(precio, 2));
                     articulo.Precio = precioRedondeado;
                     articulo.Marca = new Marca();
                     articulo.Marca.Id = (int)accesoDatos.Lector["IdMarca"];

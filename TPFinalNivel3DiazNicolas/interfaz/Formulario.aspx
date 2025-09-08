@@ -14,10 +14,11 @@
         <div class="contedor-cargar-articulo">
             <div class="contenedor-form-and-image">
                 <div class="formulario-articulos">
-                    <div class="div-form-carga">
+                    <!--<div class="div-form-carga">
                         <label for="ID" class="label-carga">ID</label>
                         <asp:TextBox runat="server" ID="txtId" CssClass="txtbox-carga"></asp:TextBox>
                     </div>
+                        -->
                     <div class="div-form-carga">
                         <label for="Codigo" class="label-carga">Codigo</label>
                         <asp:TextBox runat="server" ID="txtCodigo" CssClass="txtbox-carga"></asp:TextBox>
@@ -53,7 +54,7 @@
                         <ContentTemplate>-->
                     <div class="div-form-carga">
                         <label for="urlImagen" class="label-carga">Imagen</label>
-                        <asp:TextBox CssClass="txtbox-carga" ID="txtImagen" runat="server" AutoPostBack="false" OnTextChanged="txtImagen_TextChanged"></asp:TextBox>
+                        <asp:TextBox CssClass="txtbox-carga" ID="txtImagen" runat="server" AutoPostBack="true" OnTextChanged="txtImagen_TextChanged"></asp:TextBox>
                         <!-- </ContentTemplate>
                     </asp:UpdatePanel>
                     -->
@@ -65,20 +66,16 @@
 
                     </div>
                 </div>
-                <!--<asp:UpdatePanel runat="server" ID="updatePanel1">
-                <ContentTemplate>-->
+
                 <div class="div-imagen-articulo">
-
-                    <asp:Image ID="Image1" runat="server" ImageUrl="https://img.freepik.com/free-vector/illustration-gallery-icon_53876-27002.jpg" CssClass="asp-imagen-articulo" />
+                    <asp:UpdatePanel runat="server" ID="updatePanel1">
+                        <ContentTemplate>
+                            <asp:Image ID="Image1" runat="server" ImageUrl="https://img.freepik.com/free-vector/illustration-gallery-icon_53876-27002.jpg" CssClass="asp-imagen-articulo" />
+                        </ContentTemplate>
+                    </asp:UpdatePanel>
                 </div>
-                <!--</ContentTemplate>
-            </asp:UpdatePanel>-->
+
             </div>
-
-
-
-
-
         </div>
         <div class="panel-confirmarcion">
             <asp:Panel ID="pnlMensaje" runat="server" CssClass="mensaje-exito" Visible="false">

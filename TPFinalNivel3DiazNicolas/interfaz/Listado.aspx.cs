@@ -51,21 +51,19 @@ namespace interfaz
             }
             else
             {
+                dgvArticulos.DataSource = Session["listadoArticulo"];
+                dgvArticulos.DataBind();
                 ddlCampo.Enabled = false;
                 ddlCriterio.Enabled = false;
                 txtFiltro.Enabled = false;
                 btnBuscar.Enabled = false;
                 txtBusqueda.Enabled = !FiltroAvanzado;
-
-
-
+                txtFiltro.Text = "";
             }/*
             FiltroAvanzado = checkBoxBusquedaAvanzada.Checked;
             txtBusqueda.Enabled = !FiltroAvanzado;
-            */
-            
+            */           
         }
-
         protected void ddlCampo_SelectedIndexChanged(object sender, EventArgs e)
         {
             ddlCriterio.Items.Clear();   
@@ -86,15 +84,12 @@ namespace interfaz
         protected void btnBuscar_Click(object sender, EventArgs e)
         {
             
-
             if (!checkBoxBusquedaAvanzada.Checked)
             {
                 List<Articulo> lista = (List<Articulo>)Session["listadoArticulo"];
                 List<Articulo> listaFiltrada = lista.FindAll(x => x.Nombre.ToUpper().Contains(txtBusqueda.Text.ToUpper()));
                 dgvArticulos.DataSource = listaFiltrada;
-                dgvArticulos.DataBind();
-
-                
+                dgvArticulos.DataBind();          
             }
             else
             {
@@ -109,11 +104,8 @@ namespace interfaz
                     Session.Add("error", ex);
                     throw;
                 }
-            }
-            
-            
+            }     
         }
-
         protected void dgvArticulos_SelectedIndexChanged(object sender, EventArgs e)
         {
             
@@ -127,18 +119,15 @@ namespace interfaz
                 if(articuloNegocio.seleccionarArticulo(idArticulo) != null) {
                     Session["articuloEditar"] =(Articulo)articuloNegocio.seleccionarArticulo(idArticulo);
                     Response.Redirect("Editar.aspx");
-                }
-                
+                }               
             }
             catch (Exception)
             {
 
                 throw;
             }
-
-            
+         
         }
-
         protected void dgvArticulos_PageIndexChanging(object sender, GridViewPageEventArgs e)
         {
             dgvArticulos.PageIndex = e.NewPageIndex;
