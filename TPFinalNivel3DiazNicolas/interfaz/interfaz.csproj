@@ -80,6 +80,7 @@
     <Content Include="MenuUsuario.aspx" />
     <Content Include="Registro.aspx" />
     <Content Include="Salida.aspx" />
+    <Content Include="Validacion.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -163,6 +164,13 @@
     </Compile>
     <Compile Include="Salida.aspx.designer.cs">
       <DependentUpon>Salida.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Validacion.aspx.cs">
+      <DependentUpon>Validacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Validacion.aspx.designer.cs">
+      <DependentUpon>Validacion.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

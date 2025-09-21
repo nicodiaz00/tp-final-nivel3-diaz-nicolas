@@ -18,17 +18,14 @@ namespace interfaz
 		{
             if (!IsPostBack)
             {
-                usuario = null;
-                
+                usuario = null;              
             }
 		}
-
         protected void btnRegistro_Click(object sender, EventArgs e)
         {
             try
             {
                 UsuarioNegocio usuarioNegocio = new UsuarioNegocio();
-
 
                 if (!usuarioNegocio.usuarioRegistrado(txtEmail.Text))
                 {
@@ -39,16 +36,12 @@ namespace interfaz
                 else{
                     lblRegistrado.Text = "Ya te registraste ";
                 }
-                
-                
+                              
             }
             catch (Exception)
             {
-
                 throw;
             }
-
         }
-
     }
 }

@@ -73,7 +73,12 @@ namespace interfaz
                 {
                     Session["usuario"] = usuarioAux;
                     Response.Redirect("Default.aspx", false);
-                    
+
+                }
+                else
+                {
+                    Session["ErrorMensaje"] = "Usuario o contraseña incorrectos";
+                    Response.Redirect("Validacion.aspx", false);
                 }
             }
         }

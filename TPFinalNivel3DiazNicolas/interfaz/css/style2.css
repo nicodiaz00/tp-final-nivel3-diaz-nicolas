@@ -71,15 +71,25 @@
         font-size: 0.9em;
     }
 
+.btn-card {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+    align-items: center;
+    justify-content: space-evenly;
+    
+}
 .btnIdArticulo, .btn-favorito{
     border: none;
     border-radius: 8px;
-    height: 30%;
-    width: 40%;
+    height:50%;
+    width: 30%;
     background-color: lightgray;
     text-align: center;
     transition: background-color 0.3s ease;
     box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+    
 }
 
     .btnIdArticulo:hover, .btn-favorito:hover {

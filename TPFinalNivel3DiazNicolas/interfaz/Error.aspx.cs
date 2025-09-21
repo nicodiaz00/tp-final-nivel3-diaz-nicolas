@@ -15,16 +15,17 @@ namespace interfaz
             {
                 string mensaje = Request.QueryString["mensaje"];
 
-                if(mensaje == "-1")
+                if (mensaje == "-1")
                 {
                     lblError.Text = "Debes iniciar Sesion para agregar articulos a tus favoritos.";
                 }
-                if (Session["error"] != null)
+                else if (Session["error"] != null)
                 {
                     lblError.Text = Session["error"].ToString();
                 }
+
             }
-            
         }
     }
 }
+    

@@ -7,5 +7,4 @@
         <asp:Label runat="server" ID="lblSalida" Text="Cerraste sesion"></asp:Label>
         <asp:Button runat="server" ID="btnVolverInicio" OnClick="btnVolverInicio_Click" Text="Volver" />
     </div>
-
 </asp:Content>
