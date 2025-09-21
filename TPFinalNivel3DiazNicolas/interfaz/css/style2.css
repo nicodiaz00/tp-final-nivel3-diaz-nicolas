@@ -240,8 +240,8 @@ header {
 .panel-perfil {
     display: flex;
     flex-direction: column;
-    height: 60%;
-    width: 50%;
+    height: 70%;
+    width: 70%;
     background-color: white;
     border-radius: 20px;
     display: flex;

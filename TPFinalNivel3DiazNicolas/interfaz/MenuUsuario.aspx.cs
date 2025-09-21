@@ -44,21 +44,18 @@ namespace interfaz
         {
             Response.Redirect("Default.aspx");
         }
-        protected void btnGestion_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("listado.aspx", false);
-        }
+       
         protected void btnEditarPerfil_Click(object sender, EventArgs e)
         {
-            btnGestion.Enabled = false;
+            
             btnEditarPerfil.Enabled = false;
             btnGuardarPerfil.Enabled = true;
             btnEditarPerfil.CssClass = "btn-panel-guardar";
-            btnGestion.CssClass = "btn-panel-guardar";
+            
             btnGuardarPerfil.CssClass = "button-panel-usuario";
             usuarioTxt.Enabled = true;
             apellidoTxt.Enabled = true;
-            emailTxt.Enabled = true;
+            
             perfilTxt.Enabled = true;
             contrasena.Enabled = true;
         }
@@ -101,7 +98,11 @@ namespace interfaz
                 usuarioAux.Pass = contrasena.Text;
                 usuarioAux.UrlImagen = perfilTxt.Text;
                 usuarioNegocio.actualizarPerfil(usuarioAux);
-                          
+
+                string mensaje = "Perfil actualizado";
+                Response.Redirect("Validacion.aspx?mensaje=" + mensaje);
+
+
             }
             catch (Exception)
             {

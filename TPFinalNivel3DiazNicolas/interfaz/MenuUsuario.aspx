@@ -40,6 +40,7 @@
                         <asp:UpdatePanel runat="server" ID="updatePanel3">
                             <ContentTemplate>
                                 <asp:TextBox runat="server" ID="usuarioTxt" CssClass="asp-form"></asp:TextBox>
+                                <asp:RequiredFieldValidator ErrorMessage="Campo requerido" ControlToValidate="usuarioTxt" runat="server" CssClass="validator-style" />
                             </ContentTemplate>
                         </asp:UpdatePanel>
                     </div>
@@ -48,6 +49,7 @@
                         <asp:UpdatePanel runat="server" ID="updatePanel14">
                             <ContentTemplate>
                                 <asp:TextBox runat="server" ID="apellidoTxt" CssClass="asp-form"></asp:TextBox>
+                                <asp:RequiredFieldValidator ErrorMessage="Campo requerido" ControlToValidate="apellidoTxt" runat="server" CssClass="validator-style" />
                             </ContentTemplate>
                         </asp:UpdatePanel>
                     </div>
@@ -65,6 +67,7 @@
                         <asp:UpdatePanel runat="server" ID="updatePanel6">
                             <ContentTemplate>
                                 <asp:TextBox runat="server" ID="contrasena" CssClass="asp-form"></asp:TextBox>
+                                <asp:RequiredFieldValidator ErrorMessage="Campo requerido" ControlToValidate="contrasena" runat="server" CssClass="validator-style" />
                             </ContentTemplate>
                         </asp:UpdatePanel>
                     </div>
@@ -89,7 +92,7 @@
             <div class="contenedor-botones-usuario">
                 <asp:UpdatePanel runat="server" ID="updatePanel9">
                     <ContentTemplate>
-                        <asp:Button runat="server" ID="btnGestion" Text="Gestionar sitio" CssClass="button-panel-usuario" OnClick="btnGestion_Click" />
+                        
                         <asp:Button runat="server" ID="btnEditarPerfil" Text="Editar perfil" CssClass="button-panel-usuario" OnClick="btnEditarPerfil_Click" />
                         <asp:Button runat="server" ID="btnGuardarPerfil" Text="Guardar" CssClass="btn-panel-guardar" Enabled="false" OnClick="btnGuardarPerfil_Click" />
                     </ContentTemplate>

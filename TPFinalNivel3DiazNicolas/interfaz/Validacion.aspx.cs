@@ -17,6 +17,7 @@ namespace interfaz
                 lblValidacion.Text = Session["ErrorMensaje"].ToString();
                 Session.Remove("ErrorMensaje"); // Limpiar si ya no lo necesitás
             }
+           
         }
 
         protected void btVolverInicio_Click(object sender, EventArgs e)
