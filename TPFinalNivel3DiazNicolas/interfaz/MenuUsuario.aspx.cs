@@ -11,8 +11,8 @@ namespace interfaz
 {
     public partial class MenuUsuario : System.Web.UI.Page
     {
-        public Usuario usuarioAux {  get; set; }
-        
+        public Usuario usuarioAux { get; set; }
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!Page.IsPostBack && Request.Url.AbsolutePath.ToLower().Contains("MenuUsuario.aspx"))
@@ -23,32 +23,31 @@ namespace interfaz
             {
                 if (Session["usuario"] != null)
                 {
-
                     usuarioAux = (Usuario)Session["usuario"];
                     usuarioTxt.Text = usuarioAux.Nombre;
                     apellidoTxt.Text = usuarioAux.Apellido;
                     emailTxt.Text = usuarioAux.Email;
-                   perfilTxt.Text = usuarioAux.UrlImagen.ToString();
-
+                    contrasena.Text = usuarioAux.Pass;
+                    perfilTxt.Text = usuarioAux.UrlImagen.ToString();
+                    emailPassTxt.Text = usuarioAux.Pass;
+                    aspImagePerfil.ImageUrl = usuarioAux.UrlImagen;
                     usuarioTxt.Enabled = false;
-                    apellidoTxt.Enabled= false;
-                    emailTxt.Enabled= false;
-                    perfilTxt.Enabled= false;
+                    apellidoTxt.Enabled = false;
+                    emailTxt.Enabled = false;
+                    perfilTxt.Enabled = false;
+                    contrasena.Enabled = false;
 
                 }
             }
         }
-
         protected void btnVolver_Click(object sender, EventArgs e)
         {
             Response.Redirect("Default.aspx");
         }
-
         protected void btnGestion_Click(object sender, EventArgs e)
         {
             Response.Redirect("listado.aspx", false);
         }
-
         protected void btnEditarPerfil_Click(object sender, EventArgs e)
         {
             btnGestion.Enabled = false;
@@ -61,8 +60,7 @@ namespace interfaz
             apellidoTxt.Enabled = true;
             emailTxt.Enabled = true;
             perfilTxt.Enabled = true;
-
-
+            contrasena.Enabled = true;
         }
 
         protected void btnIniciarS_Click(object sender, EventArgs e)
@@ -74,14 +72,35 @@ namespace interfaz
                 if (usuarioAux != null)
                 {
                     Session["usuario"] = usuarioAux;
-                    Response.Redirect("MenuUsuario.aspx", false);
-                }
-                else
-                {
+                    Response.Redirect("Default.aspx", false);
                     
-
                 }
             }
+        }
+        protected void btnGuardarPerfil_Click(object sender, EventArgs e)
+        {
+            UsuarioNegocio usuarioNegocio = new UsuarioNegocio();
+            usuarioAux = (Usuario)Session["usuario"];
+
+            try
+            {
+                usuarioAux.Nombre = usuarioTxt.Text;
+                usuarioAux.Apellido = apellidoTxt.Text;
+                usuarioAux.Email = emailTxt.Text;
+                usuarioAux.Pass = contrasena.Text;
+                usuarioAux.UrlImagen = perfilTxt.Text;
+                usuarioNegocio.actualizarPerfil(usuarioAux);
+                          
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        protected void perfilTxt_TextChanged(object sender, EventArgs e)
+        {
+            aspImagePerfil.ImageUrl = perfilTxt.Text.Trim();
         }
     }
 }

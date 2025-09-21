@@ -121,5 +121,29 @@ namespace negocio
                 accesoDatos.cerrarConexion();
             }
         }
+        public void actualizarPerfil(Usuario usuarioActualizado)
+        {
+            AccesoDatos accesoDatos = new AccesoDatos();
+            try
+            {
+                accesoDatos.setearConsulta("update USERS set nombre=@nombre, apellido=@apellido, urlImagenPerfil=@urlImagen, email=@email, pass=@pass where id=@id");
+                accesoDatos.setearParametro("@nombre", usuarioActualizado.Nombre);
+                accesoDatos.setearParametro("@apellido",usuarioActualizado.Apellido);
+                accesoDatos.setearParametro("@urlImagen", usuarioActualizado.UrlImagen);
+                accesoDatos.setearParametro("@email", usuarioActualizado.Email);
+                accesoDatos.setearParametro("@pass",usuarioActualizado.Pass);
+                accesoDatos.setearParametro("@id",usuarioActualizado.Id);
+                accesoDatos.ejecutarAccion();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            finally
+            {
+                accesoDatos.cerrarConexion();
+            }
+        }
     }
 }

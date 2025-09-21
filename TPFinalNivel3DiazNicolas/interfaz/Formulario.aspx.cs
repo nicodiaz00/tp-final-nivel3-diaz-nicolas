@@ -39,7 +39,6 @@ namespace interfaz
                     ddlCategoria.DataTextField = "DescripcionCategoria";
                     ddlCategoria.DataValueField = "Id";
                     ddlCategoria.DataBind();
-
                 }
                 catch (Exception)
                 {
@@ -48,7 +47,6 @@ namespace interfaz
                 }               
             }
         }
-
         protected void btnCargarArticulo_Click(object sender, EventArgs e)
         {
             int idMarca = Convert.ToInt32(ddlMarca.SelectedValue);

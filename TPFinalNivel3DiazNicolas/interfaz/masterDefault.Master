@@ -14,24 +14,17 @@
     
 </head>
 <body>
-    <form id="form1" runat="server">
-        
-
-        
-        <header>
-            
+    <form id="form1" runat="server">              
+        <header>           
             <div class="contenedor-header">
                 <div class="contenedor-logo">
                     <div class="contendor-img-logo">
                         <a href="Default.aspx">
                             <img src="images/home.svg"/ alt="Logo Home" class="img-logo">
                         </a>
-                    </div>
-                    
+                    </div>                    
                 </div>
-                <div class="menu-mobile">
-                    
-                    
+                <div class="menu-mobile">                                       
                 </div>
                 <!--
                 <div class="menu-navegacion" id="menuNavegacion" runat="server">

@@ -14,8 +14,6 @@
                 <label for="txtBusqueda">Buscar</label>
                 <asp:UpdatePanel runat="server" ID="updatepanel1">
                     <ContentTemplate>
-
-
                         <asp:TextBox runat="server" AutoPostBack="true" ID="txtBusqueda" OnTextChanged="txtBusqueda_TextChanged" CssClass="input-busqueda"></asp:TextBox>
                     </ContentTemplate>
                 </asp:UpdatePanel>
@@ -23,15 +21,10 @@
             <div class="contenedor-check">
                 <asp:UpdatePanel runat="server">
                     <ContentTemplate>
-
-
                         <asp:CheckBox ID="checkBoxBusquedaAvanzada" Text="Busqueda avanzada" runat="server" Checked="false" OnCheckedChanged="checkBoxBusquedaAvanzada_CheckedChanged" AutoPostBack="true" />
                     </ContentTemplate>
                 </asp:UpdatePanel>
             </div>
-
-
-
         </div>
         <div class="columnaBusquedaAvanzada">
             <div class="contenedor-1">
@@ -39,8 +32,6 @@
                     <label for="ddlCampo">Campo</label>
                     <asp:UpdatePanel runat="server">
                         <ContentTemplate>
-
-
                             <asp:DropDownList runat="server" ID="ddlCampo" OnSelectedIndexChanged="ddlCampo_SelectedIndexChanged" AutoPostBack="true" CssClass="ddl-campo">
                                 <asp:ListItem Text="Codigo"></asp:ListItem>
                                 <asp:ListItem Text="Nombre"></asp:ListItem>
@@ -63,8 +54,7 @@
                     <label for="ddlFiltro">Filtro</label>
                     <asp:UpdatePanel runat="server">
                         <ContentTemplate>
-                            <asp:TextBox runat="server" ID="txtFiltro" CssClass="input-filtro"></asp:TextBox>
-                            
+                            <asp:TextBox runat="server" ID="txtFiltro" CssClass="input-filtro"></asp:TextBox>                            
                             <asp:RegularExpressionValidator ID="regexValidator" runat="server"
                                 ControlToValidate="txtFiltro"
                                 ErrorMessage="Solo se permiten números y puntos."
@@ -78,11 +68,8 @@
                 <div class="contenedorBtnBusqueda">
                     <asp:UpdatePanel runat="server">
                         <ContentTemplate>
-
-
                             <asp:Button runat="server" ID="btnBuscar" Text="Buscar" OnClick="btnBuscar_Click" CssClass="btn-buscar-avanzado" />
                         </ContentTemplate>
-
                     </asp:UpdatePanel>
                 </div>
             </div>
@@ -99,27 +86,16 @@
                                 <asp:BoundField HeaderText="DESCRIPCIÓN" DataField="Descripcion" ItemStyle-CssClass="col-descripcion" HeaderStyle-CssClass="col-descripcion" />
                                 <asp:BoundField HeaderText="IDMARCA" DataField="Marca.Id" ItemStyle-CssClass="oculto" HeaderStyle-CssClass="oculto" />
                                 <asp:BoundField HeaderText="IDCATEGORIA" DataField="Categoria.Id" ItemStyle-CssClass="oculto" HeaderStyle-CssClass="oculto" />
-
                                 <asp:BoundField HeaderText="CATEGORIA" DataField="Categoria" ItemStyle-CssClass="col-categoria" HeaderStyle-CssClass="col-categoria" />
                                 <asp:BoundField HeaderText="MARCA" DataField="Marca" ItemStyle-CssClass="col-marca" HeaderStyle-CssClass="col-marca" />
                                 <asp:BoundField HeaderText="IMAGEN" DataField="ImagenUrl" ItemStyle-CssClass="oculto" HeaderStyle-CssClass="oculto" />
                                 <asp:BoundField HeaderText="PRECIO" DataField="Precio" ItemStyle-CssClass="col-precio" HeaderStyle-CssClass="col-precio" />
                                 <asp:CommandField ShowSelectButton="true" HeaderText="Editar" SelectText="✍️" ItemStyle-CssClass="col-editar" HeaderStyle-CssClass="col-editar" />
                             </Columns>
-
                         </asp:GridView>
                     </ContentTemplate>
                 </asp:UpdatePanel>
             </div>
-
         </div>
-
     </div>
-
-
-
-
-
-
-
 </asp:Content>

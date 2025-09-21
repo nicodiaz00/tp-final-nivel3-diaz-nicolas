@@ -15,6 +15,15 @@ namespace interfaz
     {
 
         /// <summary>
+        /// Control scritpmanager1.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.ScriptManager scritpmanager1;
+
+        /// <summary>
         /// Control emailUserTxt.
         /// </summary>
         /// <remarks>
@@ -51,6 +60,15 @@ namespace interfaz
         protected global::System.Web.UI.WebControls.Button btnVolver;
 
         /// <summary>
+        /// Control updatePanel3.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.UpdatePanel updatePanel3;
+
+        /// <summary>
         /// Control usuarioTxt.
         /// </summary>
         /// <remarks>
@@ -58,6 +76,15 @@ namespace interfaz
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox usuarioTxt;
+
+        /// <summary>
+        /// Control updatePanel14.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.UpdatePanel updatePanel14;
 
         /// <summary>
         /// Control apellidoTxt.
@@ -69,6 +96,15 @@ namespace interfaz
         protected global::System.Web.UI.WebControls.TextBox apellidoTxt;
 
         /// <summary>
+        /// Control updatePanel5.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.UpdatePanel updatePanel5;
+
+        /// <summary>
         /// Control emailTxt.
         /// </summary>
         /// <remarks>
@@ -78,6 +114,33 @@ namespace interfaz
         protected global::System.Web.UI.WebControls.TextBox emailTxt;
 
         /// <summary>
+        /// Control updatePanel6.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.UpdatePanel updatePanel6;
+
+        /// <summary>
+        /// Control contrasena.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox contrasena;
+
+        /// <summary>
+        /// Control updatePanel7.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.UpdatePanel updatePanel7;
+
+        /// <summary>
         /// Control perfilTxt.
         /// </summary>
         /// <remarks>
@@ -85,6 +148,33 @@ namespace interfaz
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox perfilTxt;
+
+        /// <summary>
+        /// Control updatePanel8.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.UpdatePanel updatePanel8;
+
+        /// <summary>
+        /// Control aspImagePerfil.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image aspImagePerfil;
+
+        /// <summary>
+        /// Control updatePanel9.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.UpdatePanel updatePanel9;
 
         /// <summary>
         /// Control btnGestion.

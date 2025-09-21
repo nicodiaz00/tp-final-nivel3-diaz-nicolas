@@ -263,21 +263,91 @@ header {
     height: auto;
     
 }
-
 .panel-perfil {
+    display: flex;
+    flex-direction: column;
     height: 60%;
-    width: 70%;
-    
+    width: 50%;
+    background-color: white;
     border-radius: 20px;
     display: flex;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+.contenedor-panel {
+    width: 100%;
+    display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: center;
+}
+.titulo-panel-usuario {
+    width: 100%;
+    display: flex;
+    margin-top: 1%;
+    
+}
+    .titulo-panel-usuario > h3 {
+        margin-left: 1%;
+    }
+
+.contenedor-perfil-user {
+    width: 60%;
+}
+.imagenPerfil{
+    
+    width:40%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+}
+.img-usuario {
+    max-width: 80%; /* Evita que se pase del contenedor */
+    max-height: 80%; /* Ajusta la altura sin deformar */
+    object-fit: cover; /* Ajusta el recorte de la imagen */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+.div-panel-usuario {
+    flex-direction: column;
+    display: flex;
+    width: 100%;
+}
+.div-panel-usuario > label{
+    margin-left:2%;
+}
+.contenedor-botones-usuario{
+    
+    width:40%;
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    margin-top:1%;
+    height:10%;
+}
+.button-panel-usuario {
+    display: inline-block;
+    background-color: lightgray; /* Color azul tipo botón */
+    padding: 5px 10px;
+    text-decoration: none;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* sombra */
+    border: none;
 }
 
-.div-form {
-}
+    .button-panel-usuario:hover {
+        background-color: rgba(0, 123, 255, 0.4); /* Color al pasar el mouse */
+        color: white;
+    }
 
+.btn-panel-guardar {
+    display: inline-block;
+    background-color: lightgray; /* Color azul tipo botón */
+    padding: 5px 10px;
+    text-decoration: none;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* sombra */
+    border: none;
+}
 .asp-form {
     width: 80%;
     margin-left: 1.5%;
@@ -293,11 +363,7 @@ header {
         border: 2px solid rgba(0, 123, 255, 0.4);
     }
 
-.img-usuario {
-    max-width: 100%; /* Evita que se pase del contenedor */
-    max-height: 100%; /* Ajusta la altura sin deformar */
-    object-fit: cover; /* Ajusta el recorte de la imagen */
-}
+
 
 /*  PAGINA LISTADO.ASPX*/
 .contenedor-listado-main {
@@ -587,9 +653,7 @@ header {
 }
 .div-imagen-articulo{
     display:flex;
-    width:50%;
-    
-    
+    width:50%; 
     justify-content:center;
     align-items:center;
 }
@@ -607,7 +671,6 @@ header {
     height:15%;
     display:flex;
     flex-direction:column;
-
 }
 .txtbox-descripcion {
     width: 70%;
@@ -637,22 +700,20 @@ header {
     .txtbox-carga:focus {
         border: 2px solid rgba(0, 123, 255, 0.4);
     }
-
 .div-form-btn{
     width:100%;
     display:flex;
     flex-direction:row;
     height:20%;
     align-items:center;
-
 }
 .btn-cargar-articulo {
     height:70%;
     width: 25%;
     display: inline-block;
-    background-color: lightgray; /* Color azul tipo botón */
+    background-color: lightgray;
     color: white;
-    /*padding: 10px 10px;*/
+    
     box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
     text-decoration: none;
     border-radius: 20px;
@@ -665,18 +726,15 @@ header {
         background-color: rgba(0, 123, 255, 0.4); /* Color al pasar el mouse */
         color: white;
     }
-
     .btn-cargar-articulo.disabled,
     .btn-cargar-articulo[disabled] {
         background-color: gray; /* o un color más apagado */
         cursor: not-allowed;
     }
-
         .btn-cargar-articulo.disabled:hover,
         .btn-cargar-articulo[disabled]:hover {
             background-color: gray; /* hover inactivo */
         }
-
 .btn-cancelar-articulo {
     width: 25%;
     display: inline-block;
@@ -700,7 +758,6 @@ header {
     background-color: gray; /* o un color más apagado */
     cursor: not-allowed;
 }
-
     .btn-cancelar-articulo.disabled:hover,
     .btn-cancelar-articulo[disabled]:hover {
         background-color: gray; /* hover inactivo */
@@ -740,8 +797,7 @@ header {
     .btn-panel-edicion:hover {
         background-color: rgba(0, 123, 255, 0.4);
     }
-.contendor-editar {
-    
+.contendor-editar { 
     width: 100%;
     height:100%;
     display: flex;
@@ -750,7 +806,6 @@ header {
 }
 .contenedor-titulo-editar {
     width: 100%;
-   
     height: 10%;
     align-items: center;
     display: flex
@@ -758,7 +813,6 @@ header {
     .contenedor-titulo-editar > h2 {
         margin-left: 5%;
     }
-
 .contenedor-formulario-editar {
     width: 60%;
     height:100%;
@@ -772,15 +826,12 @@ header {
 .formulario {  
     width: 50%;  
     display: flex;
-    flex-direction: column;
-    
+    flex-direction: column;   
 }
-
 .label-formulario {
     margin-top: 1%;
     margin-left: 2%;
 }
-
 .textbox-formulario {
     width: 70%;
     margin-left: 2%;
@@ -790,7 +841,6 @@ header {
     padding-left: 10px;
     border: none;
 }
-
 .ddl {
     width: 20%;
     margin-left: 2%;
@@ -801,20 +851,13 @@ header {
     border: none;
 }
 
-.contendor-imagen {
-    
-    
+.contendor-imagen {   
     width: 50%;
     display:flex;
     justify-content:center;
     align-items:center;
-    
-    
-    
 }
-
 /*PAGINA MENUUSUARIO*/
-
 .contenedor-main-usuario {
     height: 80vh;
     width: 100%;
@@ -823,7 +866,6 @@ header {
     align-items: center;
     justify-content:center;
 }
-
 .contendor-login {
     background-color: white;
     width: 30%;
@@ -842,7 +884,6 @@ header {
     justify-content:center;
     align-items:center;
 }
-
 .contendor-user, .contendor-pass {
     width: 90%;
     height: 20%;
@@ -850,7 +891,6 @@ header {
     flex-direction: column;
     margin-top: 2%;
 }
-
 .contendor-btn {
     width: 90%;
     display: flex;
@@ -859,7 +899,6 @@ header {
     margin-top: 2%;
     justify-content: center;
 }
-
 .btn-login {
     width: 25%;
     margin-left: 0.9%;
@@ -870,12 +909,10 @@ header {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* sombra */
     text-align: center;
 }
-
     .btn-login:hover {
         background-color: rgba(0, 123, 255, 0.4); /* Color al pasar el mouse */
         color: white;
     }
-
 .txtUser, .txtPass {
     width: 50%;
     margin-left: 3%;
@@ -885,13 +922,10 @@ header {
     text-align: center;
     background-color: whitesmoke;
 }
-
 .label-user, .label-user-pass {
     margin-left: 3%;
 }
-
 /*Pagina registro*/
-
 .contenedor-main-registro {
     display: flex;
     flex-direction: column;
@@ -900,7 +934,6 @@ header {
     align-items: center;
     justify-content: center
 }
-
 .contenedor-registro {
     display: flex;
     width: 30%;
@@ -912,12 +945,10 @@ header {
     border-radius: 20px;
     box-shadow: 3px 1px 3px rgba(0, 0, 0, 0.2);
 }
-
 .contenedor-form {
     width: 90%;
     margin-top: 2%;
 }
-
 .contendor-img-perfil {
     width: 30%;
     align-items: center;
@@ -925,24 +956,20 @@ header {
     display: flex;
     background-color: yellow;
 }
-
 .img-registro-perfil {
     border-radius: 20px;
     box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2)
 }
-
 .div-form {
     display: flex;
     width: 100%;
     flex-direction: column;
     height: 15%;
 }
-
     .div-form > label {
         margin-left: 1%;
         margin-top: 1%;
     }
-
 .txtbox-form {
     width: 60%;
     margin-left: 1.5%;
@@ -1117,27 +1144,21 @@ header {
     body {
         width: auto; /* o implícitamente 100% del viewport */
     }
-
     .btn {
         font-size: 18px;
         padding: 8px;
     }
-
     header {
         width: 100%;
         height:60px;
         display: flex;
     }
-
     .contenedor-header {
         height: 100%;
-        width: 100%;
-
-        
+        width: 100%;  
         display: flex;
         flex-direction: row;
     }
-
     .contenedor-logo {
         width: 70%;
         
@@ -1153,8 +1174,6 @@ header {
         color: black;
         font-size: 30px;
     }
-
-
     .menu-navegacion {
         width: 45%;
         background-color: yellow;
@@ -1163,29 +1182,22 @@ header {
         display: flex;
         justify-content: center;
     }
-
     .menu-navegacion ul {
         list-style: none; /* quita los bullets */
         padding: 0; /* elimina padding por defecto */
         margin: 0; /* elimina margin por defecto */
         display: flex; /* opcional: si querés que los <li> queden en fila */
         flex-direction:column;
-        justify-content:center;
-        
-       
+        justify-content:center;    
     }
-
     .button-a {
         font-size: 0.9em;
         width: 100%;
     }
-
-
     .menu-navegacion li {
         flex: 1; /* opcional: que cada <li> ocupe el mismo ancho */
         box-sizing: border-box;
     }
-
     .menu-login {
         background-color: greenyellow;
         width: 45%;
@@ -1201,9 +1213,7 @@ header {
     .btn-mi-cuenta{
         font-size:0.9em;
         width:100%;
-    }
-
-    
+    } 
     .menu-content {
         display: flex;
         flex-direction: column;
@@ -1212,7 +1222,6 @@ header {
         height: 100%;
         width: 100%;
     }
-
         .menu-content ul {
             list-style: none;
             padding: 0;
@@ -1224,13 +1233,11 @@ header {
             justify-content:center;
             align-items:center;
         }
-
         .menu-content li {
             margin: 15px 0;
             display:flex;
             justify-content:center;
         }
-
             .menu-content li a {
                 color: black;
                 font-size: 1.3em;

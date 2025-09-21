@@ -5,9 +5,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <asp:ScriptManager runat="server" ID="scritpmanager1"></asp:ScriptManager>
-
     <div class="div-formulario-main">
-
         <div class="titulo">
             <h2>Nuevo Articulo</h2>
         </div>
@@ -31,20 +29,14 @@
                         <label for="Descripcion" class="label-carga">Descripcion</label>
                         <asp:TextBox runat="server" ID="txtDescripcion" CssClass="txtbox-descripcion" TextMode="MultiLine"></asp:TextBox>
                     </div>
-
                     <div class="div-form-carga">
-
                         <label for="Marca" class="label-carga">Marca</label>
                         <asp:DropDownList runat="server" ID="ddlMarca" CssClass="txtbox-carga"></asp:DropDownList>
-
                     </div>
                     <div class="div-form-carga">
 
                         <label for="Categoria" class="label-carga">Categoria</label>
                         <asp:DropDownList runat="server" ID="ddlCategoria" CssClass="txtbox-carga"></asp:DropDownList>
-
-
-
                     </div>
                     <div class="div-form-carga">
                         <label for="Precio" class="label-carga">Precio</label>
@@ -54,7 +46,11 @@
                         <ContentTemplate>-->
                     <div class="div-form-carga">
                         <label for="urlImagen" class="label-carga">Imagen</label>
-                        <asp:TextBox CssClass="txtbox-carga" ID="txtImagen" runat="server" AutoPostBack="true" OnTextChanged="txtImagen_TextChanged"></asp:TextBox>
+                        <asp:UpdatePanel runat="server">
+                            <ContentTemplate>
+                                <asp:TextBox CssClass="txtbox-carga" ID="txtImagen" runat="server" AutoPostBack="true" OnTextChanged="txtImagen_TextChanged"></asp:TextBox>
+                            </ContentTemplate>
+                        </asp:UpdatePanel>
                         <!-- </ContentTemplate>
                     </asp:UpdatePanel>
                     -->
@@ -62,11 +58,8 @@
                     <div class="div-form-btn">
                         <asp:Button runat="server" ID="btnCargarArticulo" CssClass="btn-cargar-articulo" Text="Cargar" OnClick="btnCargarArticulo_Click" />
                         <asp:Button runat="server" ID="btnCancelarArticulo" CssClass="btn-cancelar-articulo" Text="Cancelar" OnClick="btnCancelarArticulo_Click" />
-
-
                     </div>
                 </div>
-
                 <div class="div-imagen-articulo">
                     <asp:UpdatePanel runat="server" ID="updatePanel1">
                         <ContentTemplate>
@@ -74,7 +67,6 @@
                         </ContentTemplate>
                     </asp:UpdatePanel>
                 </div>
-
             </div>
         </div>
         <div class="panel-confirmarcion">
@@ -83,10 +75,5 @@
                 <asp:Button ID="btnAceptarMensaje" runat="server" Text="Aceptar" OnClick="btnAceptarMensaje_Click" />
             </asp:Panel>
         </div>
-
     </div>
-
-
-
-
 </asp:Content>

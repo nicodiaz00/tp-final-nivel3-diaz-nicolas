@@ -21,13 +21,10 @@ namespace interfaz
                if(!IsPostBack) {
                     articulo = (Articulo)Session["articuloEditar"];
                     MarcaNegocio marcaNegocio = new MarcaNegocio();
-                    CategoriaNegocio categoriaNegocio = new CategoriaNegocio();
-                    
+                    CategoriaNegocio categoriaNegocio = new CategoriaNegocio();                 
                     listadoMarca = new List<Marca>();
                     listadoMarca = marcaNegocio.listarMarcas();
-
                     listadoCategoria = categoriaNegocio.listarCategoria();
-
                     txtCodigo.Text = articulo.Codigo;
                     txtNombre.Text = articulo.Nombre;
                     txtDescripcion.Text = articulo.Descripcion;
@@ -36,16 +33,12 @@ namespace interfaz
                     ddlMarca.DataValueField = "Id";
                     ddlMarca.DataBind();
                     ddlMarca.SelectedValue = articulo.Marca.Id.ToString();
-
                     ddlCategoria.DataSource = listadoCategoria;
                     ddlCategoria.DataSource = listadoCategoria;
                     ddlCategoria.DataTextField = "DescripcionCategoria";
                     ddlCategoria.DataValueField = "Id";
                     ddlCategoria.DataBind();
                     ddlCategoria.SelectedValue = articulo.Categoria.Id.ToString();  
-
-
-
                     txtUrlImagen.Text = articulo.ImagenUrl;
                     txtPrecio.Text = articulo.Precio.ToString();
                     aspImageEditarArticulo.ImageUrl = articulo.ImagenUrl;
@@ -53,17 +46,11 @@ namespace interfaz
             }
             catch (Exception)
             {
-
                 throw;
-            }
-            
-
-
+            }          
         }
-
         protected void btnGuardarEdicion_Click(object sender, EventArgs e)
-        {
-            
+        {         
             int marca = Convert.ToInt32(ddlMarca.SelectedValue);
             int categoria = Convert.ToInt32(ddlCategoria.SelectedValue);
             decimal precio = Convert.ToDecimal(txtPrecio.Text.Trim());
@@ -73,18 +60,13 @@ namespace interfaz
             {
                 ArticuloNegocio articuloNegocio = new ArticuloNegocio();
                 articuloNegocio.editarArticulo(txtCodigo.Text,txtNombre.Text,txtDescripcion.Text,marca,categoria,txtUrlImagen.Text,precio,articulo.Id);
-
                 Response.Redirect("default.aspx", false);
-
             }
             catch (Exception)
             {
-
                 throw;
             }
-
         }
-
         protected void btnEliminarArticulo_Click(object sender, EventArgs e)
         {
             try
@@ -93,20 +75,16 @@ namespace interfaz
                 ArticuloNegocio articuloNegocio = new ArticuloNegocio();
                 articuloNegocio.eliminarArticulo(articulo.Id);
                 Response.Redirect("default.aspx", false);
-
             }
             catch (Exception)
             {
-
                 throw;
             }
         }
-
         protected void btnCancelarEdicion_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("Listado.aspx", false);
         }
-
         protected void txtUrlImagen_TextChanged(object sender, EventArgs e)
         {
             aspImageEditarArticulo.ImageUrl = txtUrlImagen.Text.Trim();
