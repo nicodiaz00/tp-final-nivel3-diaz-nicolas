@@ -38,9 +38,10 @@ namespace interfaz
                 }
                               
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw;
+                Session.Add("error", ex.ToString());
+                Response.Redirect("Error.aspx", false);
             }
         }
     }

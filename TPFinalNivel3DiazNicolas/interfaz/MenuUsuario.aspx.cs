@@ -62,24 +62,30 @@ namespace interfaz
             perfilTxt.Enabled = true;
             contrasena.Enabled = true;
         }
-
         protected void btnIniciarS_Click(object sender, EventArgs e)
         {
             UsuarioNegocio usuarioNegocio = new UsuarioNegocio();
             if (IsPostBack)
             {
-                usuarioAux = usuarioNegocio.loguearse(emailUserTxt.Text, emailPassTxt.Text);
-                if (usuarioAux != null)
+                if(string.IsNullOrEmpty(emailUserTxt.Text)|| string.IsNullOrEmpty(emailPassTxt.Text))
                 {
-                    Session["usuario"] = usuarioAux;
-                    Response.Redirect("Default.aspx", false);
-
+                    string mensaje = "Los campos Usuario/Contraseña no pueden estar vacios.";
+                    Response.Redirect("Error.aspx?mensaje=" + mensaje);
                 }
                 else
                 {
-                    Session["ErrorMensaje"] = "Usuario o contraseña incorrectos";
-                    Response.Redirect("Validacion.aspx", false);
-                }
+                    usuarioAux = usuarioNegocio.loguearse(emailUserTxt.Text, emailPassTxt.Text);
+                    if (usuarioAux != null)
+                    {
+                        Session["usuario"] = usuarioAux;
+                        Response.Redirect("Default.aspx", false);
+                    }
+                    else
+                    {
+                        Session["ErrorMensaje"] = "Usuario o contraseña incorrectos";
+                        Response.Redirect("Validacion.aspx", false);
+                    }
+                }               
             }
         }
         protected void btnGuardarPerfil_Click(object sender, EventArgs e)

@@ -22,16 +22,22 @@ namespace interfaz
             }
             if (!IsPostBack)
             {
-                ArticuloNegocio negocio = new ArticuloNegocio();
-                Listado = negocio.listarArticulo();
-                Session.Add("listadoArticulo", Listado);
                 
-                repArticulo.DataSource = Listado;
-                repArticulo.DataBind();
-            }
-            
+                try
+                {
+                    ArticuloNegocio negocio = new ArticuloNegocio();
+                    Listado = negocio.listarArticulo();
+                    Session.Add("listadoArticulo", Listado);
+                    repArticulo.DataSource = Listado;
+                    repArticulo.DataBind();                
+                }
+                catch (Exception ex)
+                {
+                    Session.Add("error", ex.ToString());
+                    Response.Redirect("Error.aspx");                  
+                }               
+            }           
         }
-
         protected void btnIdArticulo_Click(object sender, EventArgs e)
         {
             if(Session["usuario"]!= null)
@@ -40,12 +46,11 @@ namespace interfaz
             }
             else
             {
-                string mensaje = "-1";
+                string mensaje = "Debes iniciar Sesion para agregar articulos a tus favoritos.";
                 Response.Redirect("Error.aspx?mensaje=" + mensaje);
             }
             
         }
-
         protected void btnFavorito_Click(object sender, EventArgs e)
         {
             string idArticulo = ((Button)sender).CommandArgument;
