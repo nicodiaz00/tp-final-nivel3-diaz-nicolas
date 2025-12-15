@@ -593,6 +593,7 @@ header {
     display:flex;
     flex-direction:row;
     justify-content:center;
+    height:80%;
 }
 .formulario-articulos {
     margin-top: 0.5%;

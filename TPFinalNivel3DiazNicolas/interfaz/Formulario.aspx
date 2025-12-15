@@ -20,10 +20,12 @@
                     <div class="div-form-carga">
                         <label for="Codigo" class="label-carga">Codigo</label>
                         <asp:TextBox runat="server" ID="txtCodigo" CssClass="txtbox-carga"></asp:TextBox>
+                        <asp:RequiredFieldValidator ErrorMessage="Codigo requerido" ControlToValidate="txtCodigo" runat="server" CssClass="validator-style" />
                     </div>
                     <div class="div-form-carga">
                         <label for="Nombre" class="label-carga">Nombre</label>
                         <asp:TextBox runat="server" ID="txtNombre" CssClass="txtbox-carga"></asp:TextBox>
+                        <asp:RequiredFieldValidator ErrorMessage="Nombre requerido" ControlToValidate="txtNombre" runat="server" CssClass="validator-style" />
                     </div>
                     <div class="div-form-carga-descripcion">
                         <label for="Descripcion" class="label-carga">Descripcion</label>
@@ -41,6 +43,7 @@
                     <div class="div-form-carga">
                         <label for="Precio" class="label-carga">Precio</label>
                         <asp:TextBox CssClass="txtbox-carga" ID="txtPrecio" runat="server"></asp:TextBox>
+                        <asp:RequiredFieldValidator ErrorMessage="Precio requerido" ControlToValidate="txtPrecio" runat="server" CssClass="validator-style" />
                     </div>
                     <!--<asp:UpdatePanel runat="server" ID="updatePanel">
                         <ContentTemplate>-->

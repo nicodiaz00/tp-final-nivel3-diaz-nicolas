@@ -12,6 +12,14 @@ namespace interfaz
     public partial class Listado : System.Web.UI.Page
     {
         public bool FiltroAvanzado {  get; set; }
+
+        private void CargarCampos()
+        {
+            ddlCampo.Items.Clear();
+            ddlCampo.Items.Add(new ListItem("Codigo", "Codigo"));
+            ddlCampo.Items.Add(new ListItem("Nombre", "Nombre"));
+            ddlCampo.Items.Add(new ListItem("Precio", "Precio"));
+        }
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -38,18 +46,26 @@ namespace interfaz
         {
             if (checkBoxBusquedaAvanzada.Checked)
             {
+
+                dgvArticulos.DataSource = Session["listadoArticulo"];
+                dgvArticulos.DataBind();
                 FiltroAvanzado = checkBoxBusquedaAvanzada.Checked;
+                txtBusqueda.Text = "";
                 txtBusqueda.Enabled = !FiltroAvanzado;
+                //ddlCampo.Items.Clear();
                 ddlCampo.Enabled = true;
                 ddlCriterio.Enabled = true;
                 txtFiltro.Enabled = true;
                 btnBuscar.Enabled = true;
                 btnBuscar.CssClass = "btn-buscar-avanzado";
+                CargarCampos();
             }
             else
             {
                 dgvArticulos.DataSource = Session["listadoArticulo"];
                 dgvArticulos.DataBind();
+                ddlCampo.Items.Clear();
+                ddlCriterio.Items.Clear();
                 ddlCampo.Enabled = false;
                 ddlCriterio.Enabled = false;
                 txtFiltro.Enabled = false;

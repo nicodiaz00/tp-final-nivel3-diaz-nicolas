@@ -33,9 +33,7 @@
                     <asp:UpdatePanel runat="server">
                         <ContentTemplate>
                             <asp:DropDownList runat="server" ID="ddlCampo" OnSelectedIndexChanged="ddlCampo_SelectedIndexChanged" AutoPostBack="true" CssClass="ddl-campo">
-                                <asp:ListItem Text="Codigo"></asp:ListItem>
-                                <asp:ListItem Text="Nombre"></asp:ListItem>
-                                <asp:ListItem Text="Precio"></asp:ListItem>
+                                                       
                             </asp:DropDownList>
                         </ContentTemplate>
                     </asp:UpdatePanel>
